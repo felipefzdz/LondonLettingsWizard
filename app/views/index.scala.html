@@ -1,7 +1,31 @@
-@(message: String)
+@(areas: List[Area], areaForm: Form[Area])
 
-@main("Welcome to Play 2.1") {
-    
-    @play20.welcome(message, style = "Java")
-    
+@import helper._
+
+@main("Todo list") {
+
+<h1>@areas.size() area(s)</h1>
+
+<ul>
+    @for(area <- areas) {
+    <li>
+        @area.name
+
+        @form(routes.Application.deleteArea(area.id)) {
+        <input type="submit" value="Delete">
+        }
+    </li>
+    }
+</ul>
+
+<h2>Add a new area</h2>
+
+@form(routes.Application.newArea()) {
+
+@inputText(areaForm("name"))
+
+<input type="submit" value="Create">
+
+}
+
 }
