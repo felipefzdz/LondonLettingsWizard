@@ -12,7 +12,6 @@ public class Application extends Controller {
 
     static Form<Area> areaForm = Form.form(Area.class);
 
-
     public static Result index() {
         return redirect(routes.Application.areas());
     }
@@ -24,11 +23,21 @@ public class Application extends Controller {
     }
 
     public static Result newArea() {
-        return TODO;
+        Form<Area> filledForm = areaForm.bindFromRequest();
+        if(filledForm.hasErrors()) {
+            return badRequest(
+                    views.html.index.render(Area.all(), filledForm)
+            );
+        } else {
+            Area.create(filledForm.get());
+            return redirect(routes.Application.areas());
+        }
     }
 
     public static Result deleteArea(Long id) {
-        return TODO;
+        Area.delete(id);
+        return redirect(routes.Application.areas());
     }
-  
+
+
 }
