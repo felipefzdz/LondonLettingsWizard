@@ -1,0 +1,51 @@
+
+# Users
+
+users:
+
+    - !!models.User
+        email:      guillaume@sample.com
+        name:       Guillaume Bort
+        password:   secret
+    
+    - !!models.User
+        email:      maxime@sample.com
+        name:       Maxime Dantec
+        password:   secret
+    
+    - !!models.User
+        email:      sadek@sample.com
+        name:       Sadek Drobi
+        password:   secret
+    
+    - !!models.User
+        email:      erwan@sample.com
+        name:       Erwan Loisant
+        password:   secret
+
+
+
+# Areas
+
+areas:
+
+    - !!models.Area
+        id:         1
+        name:       Islington
+        minPrice:   500
+        maxPrice:   700
+        rateTransport:   9
+
+    - !!models.Area
+        id:         2
+        name:       Hackney
+        minPrice:   300
+        maxPrice:   600
+        rateTransport:   6
+
+    - !!models.Area
+        id:         3
+        name:       Camden
+        minPrice:   400
+        maxPrice:   750
+        rateTransport:   7

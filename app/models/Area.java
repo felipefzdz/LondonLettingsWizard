@@ -34,6 +34,14 @@ public class Area extends Model{
             Long.class, Area.class
     );
 
+    public Area(Long id, String name, Integer minPrice, Integer maxPrice, Integer rateTransport) {
+        this.id = id;
+        this.name = name;
+        this.minPrice = minPrice;
+        this.maxPrice = maxPrice;
+        this.rateTransport = rateTransport;
+    }
+
     public static List<Area> all() {
         return find.all();
     }
