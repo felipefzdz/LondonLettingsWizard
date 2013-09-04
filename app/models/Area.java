@@ -49,7 +49,7 @@ public class Area extends Model{
         find.ref(id).delete();
     }
 
-    public static List<Area> findAreasInRange(int providedPrice, int bedrooms) {
+    public static List<Area> findAreasPriceInRange(int providedPrice, int bedrooms) {
         QueryIterator<Price> it = findPrice.where()
                 .eq("bedrooms", bedrooms)
                 .betweenProperties("minPrice", "maxPrice", providedPrice)
@@ -64,6 +64,7 @@ public class Area extends Model{
         }
         return new ArrayList<Area>(areas);
     }
+
 
     public void setWealthScale(WealthScale wealthScale) {
         this.wealthScale = wealthScale;

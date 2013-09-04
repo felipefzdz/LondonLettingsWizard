@@ -6,8 +6,9 @@
 GET         /                        controllers.Application.index()
 
 # Areas
-GET         /areasSearch             controllers.AreaController.areasSearch()
-GET         /areasFiltered             controllers.AreaController.areasFiltered()
+GET         /areaPriceSearch         controllers.AreaController.areaPriceSearch()
+GET         /areasPriceFiltered      controllers.AreaController.areaPriceFiltered()
+GET         /areasTransportFiltered  controllers.AreaController.areaTransportFiltered()
 GET         /areas                   controllers.AreaController.areas()
 POST        /areas                   controllers.AreaController.newArea()
 POST        /areas/:id/delete        controllers.AreaController.deleteArea(id: Long)

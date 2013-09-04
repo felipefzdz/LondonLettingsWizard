@@ -3,9 +3,9 @@
 
 @main("London Lettings Wizard") {
 
-<h2>Search Areas</h2>
+<h2>Search Areas By Price</h2>
 
-@form(routes.AreaController.areasFiltered()) {
+@form(routes.AreaController.areaPriceFiltered()) {
 
     @inputText(priceForm("bedrooms"))
     @inputText(priceForm("price"))

@@ -4,7 +4,6 @@ import com.avaje.ebean.Ebean;
 import com.avaje.ebean.EbeanServer;
 import com.avaje.ebean.config.ServerConfig;
 import com.avaje.ebean.config.dbplatform.H2Platform;
-import com.avaje.ebean.config.dbplatform.MySqlPlatform;
 import com.avaje.ebeaninternal.api.SpiEbeanServer;
 import com.avaje.ebeaninternal.server.ddl.DdlGenerator;
 import org.junit.*;
@@ -80,28 +79,10 @@ public class ModelsTest extends WithApplication {
     }
 
     @Test
-    public void createAndRetrieveUser() {
-        new User("bob@gmail.com", "Bob", "secret").save();
-        User bob = User.find.where().eq("email", "bob@gmail.com").findUnique();
-        assertNotNull(bob);
-        assertEquals("Bob", bob.name);
-    }
-
-    @Test
-    public void tryAuthenticateUser() {
-        new User("bob@gmail.com", "Bob", "secret").save();
-
-        assertNotNull(User.authenticate("bob@gmail.com", "secret"));
-        assertNull(User.authenticate("bob@gmail.com", "badpassword"));
-        assertNull(User.authenticate("tom@gmail.com", "secret"));
-    }
-
-    @Test
     public void testCountInserts() {
         insertInitialData();
 
         // Count things
-        assertEquals(4, User.find.findRowCount());
         assertEquals(3, Area.find.findRowCount());
         assertEquals(9, Price.find.findRowCount());
     }
@@ -109,15 +90,15 @@ public class ModelsTest extends WithApplication {
     @Test
     public void testAreasWithPriceInRange(){
         insertInitialData();
-        assertEquals(3, Area.findAreasInRange(200,1).size());
-        assertEquals(0, Area.findAreasInRange(200,4).size());
+        assertEquals(3, Area.findAreasPriceInRange(500, 2).size());
+        assertEquals(0, Area.findAreasPriceInRange(200, 4).size());
     }
 
 
 
     private void insertInitialData() {
         Map<String,List<Object>> all = (Map<String,List<Object>>) Yaml.load("initial-data.yml");
-        Ebean.save(all.get("users"));
         Ebean.save(all.get("areas"));
+        Ebean.save(all.get("prices"));
     }
 }

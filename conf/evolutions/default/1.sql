@@ -22,18 +22,9 @@ create table price (
   constraint pk_price primary key (id))
 ;
 
-create table user (
-  email                     varchar(255) not null,
-  name                      varchar(255),
-  password                  varchar(255),
-  constraint pk_user primary key (email))
-;
-
 create sequence area_seq;
 
 create sequence price_seq;
-
-create sequence user_seq;
 
 alter table price add constraint fk_price_area_1 foreign key (area_id) references area (id) on delete restrict on update restrict;
 create index ix_price_area_1 on price (area_id);
@@ -48,13 +39,9 @@ drop table if exists area;
 
 drop table if exists price;
 
-drop table if exists user;
-
 SET REFERENTIAL_INTEGRITY TRUE;
 
 drop sequence if exists area_seq;
 
 drop sequence if exists price_seq;
-
-drop sequence if exists user_seq;
 
