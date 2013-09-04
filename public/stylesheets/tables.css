@@ -1,0 +1,22 @@
+
+/* TODO: to be replaced with proper default agent-generated content styles */
+.main th,
+.main td {
+	padding: 4px 8px 4px 4px;
+	vertical-align: top;
+}
+
+table {
+	margin-bottom: 20px;
+	margin-bottom: 2rem;
+	width: 100%;
+	border-bottom: 1px solid #ddd;
+}
+
+th,
+td {
+	border: 1px solid #ddd;
+	border-bottom: 0;
+	padding: 8px;
+	padding:.8rem 8px;
+}
