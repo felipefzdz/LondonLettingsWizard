@@ -12,7 +12,7 @@ object ApplicationBuild extends Build {
     javaCore,
     javaJdbc,
     javaEbean,
-    "postgresql" % "postgresql" % "8.4-702.jdbc4",
+    "postgresql" % "postgresql" % "9.1-901-1.jdbc4",
     "net.sf.flexjson" % "flexjson" % "2.0"
   )
 
