@@ -1,14 +1,24 @@
 package models;
 
 import com.avaje.ebean.Ebean;
+import com.avaje.ebean.EbeanServer;
+import com.avaje.ebean.config.ServerConfig;
+import com.avaje.ebean.config.dbplatform.H2Platform;
+import com.avaje.ebean.config.dbplatform.MySqlPlatform;
+import com.avaje.ebeaninternal.api.SpiEbeanServer;
+import com.avaje.ebeaninternal.server.ddl.DdlGenerator;
 import org.junit.*;
 import static org.junit.Assert.*;
 
 import play.libs.Yaml;
 import play.test.WithApplication;
+import play.test.FakeApplication;
 
 import java.util.List;
 import java.util.Map;
+import java.io.IOException;
+import play.test.Helpers;
+
 
 import static play.test.Helpers.*;
 
@@ -21,6 +31,40 @@ import static play.test.Helpers.*;
  */
 public class ModelsTest extends WithApplication {
 
+    public static FakeApplication app;
+
+    @BeforeClass
+    public static void startApp() throws IOException {
+
+        app = Helpers.fakeApplication();
+        Helpers.start(app);
+    }
+
+    @AfterClass
+    public static void stopApp() {
+        Helpers.stop(app);
+    }
+
+    @Before
+    public void dropCreateDb() throws IOException {
+
+        String serverName = "default";
+
+        EbeanServer server = Ebean.getServer(serverName);
+
+        ServerConfig config = new ServerConfig();
+
+        DdlGenerator ddl = new DdlGenerator((SpiEbeanServer) server, new H2Platform(), config);
+
+        // Drop
+        ddl.runScript(false, ddl.generateDropDdl());
+
+        // Create
+        ddl.runScript(false, ddl.generateCreateDdl());
+    }
+
+
+
     @Before
     public void setUp() {
         start(fakeApplication(inMemoryDatabase()));
@@ -29,7 +73,7 @@ public class ModelsTest extends WithApplication {
 
     @Test
     public void createAndRetrieveArea() {
-        new Area(1l,"Islington", new Integer(200), new Integer(300), new Integer(5)).save();
+        new Area(1l,"Islington", new Integer(5)).save();
         Area islington = Area.find.where().eq("name", "Islington").findUnique();
         assertNotNull(islington);
         assertEquals("Islington", islington.name);
@@ -53,21 +97,27 @@ public class ModelsTest extends WithApplication {
     }
 
     @Test
-    public void fullTest() {
-        Map<String,List<Object>> all = (Map<String,List<Object>>)Yaml.load("initial-data.yml");
-        Ebean.save(all.get("users"));
-        Ebean.save(all.get("areas"));
+    public void testCountInserts() {
+        insertInitialData();
 
         // Count things
         assertEquals(4, User.find.findRowCount());
         assertEquals(3, Area.find.findRowCount());
+        assertEquals(9, Price.find.findRowCount());
+    }
+
+    @Test
+    public void testAreasWithPriceInRange(){
+        insertInitialData();
+        assertEquals(3, Area.findAreasInRange(200,1).size());
+        assertEquals(0, Area.findAreasInRange(200,4).size());
+    }
 
 
-        // Try to authenticate as users
-        assertNotNull(User.authenticate("bob@example.com", "secret"));
-        assertNotNull(User.authenticate("jane@example.com", "secret"));
-        assertNull(User.authenticate("jeff@example.com", "badpassword"));
-        assertNull(User.authenticate("tom@example.com", "secret"));
 
+    private void insertInitialData() {
+        Map<String,List<Object>> all = (Map<String,List<Object>>) Yaml.load("initial-data.yml");
+        Ebean.save(all.get("users"));
+        Ebean.save(all.get("areas"));
     }
 }

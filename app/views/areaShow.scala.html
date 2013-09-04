@@ -1,0 +1,20 @@
+@(areas: List[Area], areaForm: Form[Area])
+
+@import helper._
+
+@main("London Lettings Wizard") {
+
+<h1>@areas.size() area(s)</h1>
+
+<ul>
+    @for(area <- areas) {
+    <li>
+        @area.name
+        @area.wealthScale.toString
+    </li>
+
+    }
+</ul>
+
+
+}

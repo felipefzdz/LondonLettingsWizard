@@ -32,20 +32,103 @@ areas:
     - !!models.Area
         id:         1
         name:       Islington
-        minPrice:   500
-        maxPrice:   700
         rateTransport:   9
+
 
     - !!models.Area
         id:         2
         name:       Hackney
-        minPrice:   300
-        maxPrice:   600
         rateTransport:   6
+
 
     - !!models.Area
         id:         3
         name:       Camden
-        minPrice:   400
-        maxPrice:   750
         rateTransport:   7
+
+
+# Prices
+
+prices:
+
+    - !!models.Price
+        id:         1
+        bedrooms:       0
+        minPrice:   100
+        halfPrice:  130
+        maxPrice:   200
+        area:    !!models.Area
+            id: 1
+
+    - !!models.Price
+        id:         2
+        bedrooms:       1
+        minPrice:   400
+        halfPrice:  430
+        maxPrice:   600
+        area:    !!models.Area
+            id: 1
+
+    - !!models.Price
+        id:         3
+        bedrooms:       2
+        minPrice:   500
+        halfPrice:  530
+        maxPrice:   700
+        area:    !!models.Area
+            id: 1
+
+    - !!models.Price
+        id:         4
+        bedrooms:       0
+        minPrice:   300
+        halfPrice:  330
+        maxPrice:   400
+        area:    !!models.Area
+            id: 2
+
+    - !!models.Price
+        id:         5
+        bedrooms:       1
+        minPrice:   200
+        halfPrice:  530
+        maxPrice:   700
+        area:    !!models.Area
+            id: 2
+
+    - !!models.Price
+        id:         6
+        bedrooms:       2
+        minPrice:   200
+        halfPrice:  430
+        maxPrice:   800
+        area:    !!models.Area
+            id: 2
+
+    - !!models.Price
+        id:         7
+        bedrooms:       0
+        minPrice:   500
+        halfPrice:  530
+        maxPrice:   600
+        area:    !!models.Area
+            id: 3
+
+    - !!models.Price
+        id:         8
+        bedrooms:       1
+        minPrice:   200
+        halfPrice:  430
+        maxPrice:   500
+        area:    !!models.Area
+            id: 3
+
+    - !!models.Price
+        id:         9
+        bedrooms:       2
+        minPrice:   400
+        halfPrice:  630
+        maxPrice:   700
+        area:    !!models.Area
+            id: 3
+

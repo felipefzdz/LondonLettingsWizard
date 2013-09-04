@@ -1,0 +1,17 @@
+@(priceForm: Form[FilterPrice])
+@import helper._
+
+@main("London Lettings Wizard") {
+
+<h2>Search Areas</h2>
+
+@form(routes.AreaController.areasFiltered()) {
+
+    @inputText(priceForm("bedrooms"))
+    @inputText(priceForm("price"))
+
+    <input type="submit" value="Search">
+
+}
+}
+
