@@ -6,18 +6,21 @@ areas:
         id:         1
         name:       Islington
         rateTransport:   9
+        description: Islington grew from humble beginnings. What started as an overcrowded London suburb transformed into a neighbourhood of high-class status—Islington is now a destination for celebrities, socialites, and fast-paced professionals. Buildings that began as inns and defunct social houses have since been reimagined as fashionable gastropubs, wine bars, and boutiques. Islington offers another perk—getting to and from this stylish neighbourhood is simple via its bus lines and nearby tube stations.
 
 
     - !!models.Area
         id:         2
-        name:       Hackney
+        name:       Greenwich
         rateTransport:   6
+        description: Taking international trendsetting to new extremes, the world sets its watch to Greenwich Mean Time. Greenwich not only establishes the benchmark for global time keeping, it’s also home to architectural splendour, forested parks, rich maritime history, and popular antiques markets. Victorian and Georgian buildings lend the neighbourhood a rustic opulence, while the ships docked along its southeast London banks serve as an ever-present reminder of Greenwich’s nautical inclinations.
 
 
     - !!models.Area
         id:         3
-        name:       Camden
+        name:       Camden Town
         rateTransport:   7
+        description: Leather, studs, and combat boots are common apparel in Camden Town, an alternative oasis away from the prestige of royalty and Parliament. More often than not, Camden Town’s building facades feature politically charged commentary and saturated hues that pay homage to Pop art. You don’t have to question authority to enjoy this north London neighborhood—Camden Town’s numerous pubs, music venues, and street markets exude invitingly creative atmospheres.
 
 
 # Prices

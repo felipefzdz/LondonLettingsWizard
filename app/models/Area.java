@@ -1,9 +1,11 @@
 package models;
 
 import com.avaje.ebean.QueryIterator;
+import org.omg.CORBA.PUBLIC_MEMBER;
 import play.data.validation.Constraints;
 import play.db.ebean.Model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.util.*;
@@ -20,8 +22,10 @@ public class Area extends Model{
 
     public Integer rateTransport;
 
-
     public WealthScale wealthScale;
+
+    @Column(columnDefinition = "TEXT")
+    public String description;
 
     public static Model.Finder<Long,Area> find = new Model.Finder<Long, Area>(
             Long.class, Area.class
@@ -63,6 +67,17 @@ public class Area extends Model{
             areas.add(area);
         }
         return new ArrayList<Area>(areas);
+    }
+
+
+    public static List<Area> filterByTransportRate(List<Area> areas, Integer rateTransport) {
+        List<Area> filteredAreas = new ArrayList<Area>();
+        for(Area area: areas){
+            if (area.rateTransport >= rateTransport){
+                filteredAreas.add(area);
+            }
+        }
+        return filteredAreas;
     }
 
 

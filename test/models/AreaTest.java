@@ -13,6 +13,7 @@ import play.libs.Yaml;
 import play.test.WithApplication;
 import play.test.FakeApplication;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.io.IOException;
@@ -28,7 +29,7 @@ import static play.test.Helpers.*;
  * Time: 15:19
  * To change this template use File | Settings | File Templates.
  */
-public class ModelsTest extends WithApplication {
+public class AreaTest extends WithApplication {
 
     public static FakeApplication app;
 
@@ -92,6 +93,18 @@ public class ModelsTest extends WithApplication {
         insertInitialData();
         assertEquals(3, Area.findAreasPriceInRange(500, 2).size());
         assertEquals(0, Area.findAreasPriceInRange(200, 4).size());
+    }
+
+    @Test
+    public void testAreasTransportRate(){
+        List<Area> areas = new ArrayList<Area>();
+        areas.add(new Area(1L, "Islington", 5));
+        areas.add(new Area(2L, "Clapham", 3));
+        areas.add(new Area(3L, "Dalston", 9));
+        assertEquals(3, Area.filterByTransportRate(areas, 2).size());
+        assertEquals(2, Area.filterByTransportRate(areas, 4).size());
+        assertEquals(1, Area.filterByTransportRate(areas, 6).size());
+        assertEquals(0, Area.filterByTransportRate(areas, 10).size());
     }
 
 

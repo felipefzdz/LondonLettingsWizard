@@ -9,9 +9,7 @@ GET         /                        controllers.Application.index()
 GET         /areaPriceSearch         controllers.AreaController.areaPriceSearch()
 GET         /areasPriceFiltered      controllers.AreaController.areaPriceFiltered()
 GET         /areasTransportFiltered  controllers.AreaController.areaTransportFiltered()
-GET         /areas                   controllers.AreaController.areas()
-POST        /areas                   controllers.AreaController.newArea()
-POST        /areas/:id/delete        controllers.AreaController.deleteArea(id: Long)
+GET         /areaShow                controllers.AreaController.areaShow()
 
 # Map static resources from the /public folder to the /assets URL path
 GET         /assets/*file            controllers.Assets.at(path="/public", file)

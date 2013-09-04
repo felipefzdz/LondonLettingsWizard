@@ -8,6 +8,7 @@ create table area (
   name                      varchar(255),
   rate_transport            integer,
   wealth_scale              integer,
+  description               TEXT,
   constraint ck_area_wealth_scale check (wealth_scale in (0,1,2,3,4)),
   constraint pk_area primary key (id))
 ;

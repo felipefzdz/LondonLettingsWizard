@@ -11,6 +11,13 @@ public enum WealthScale {
 
     VERYLOW, LOW, AVERAGE, HIGH, VERYHIGH;
 
+    /**
+     *
+     * @param providedPrice
+     * @param price
+     * @return
+     * throws IllegalArgumentException if the providedPrice is less than the minPrice included in price or is greater than maxPrice included in price.
+     */
     public static WealthScale calculateWealthScale(int providedPrice, Price price){
         if (providedPrice == price.halfPrice){
             return AVERAGE;
@@ -24,6 +31,9 @@ public enum WealthScale {
         if (providedPrice < price.halfPrice){
             return LOW;
         }
-        return HIGH;
+        if (providedPrice > price.halfPrice){
+            return HIGH;
+        }
+        throw new IllegalArgumentException("The provided price should be in the range");
     }
 }

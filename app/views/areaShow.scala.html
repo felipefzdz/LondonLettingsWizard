@@ -1,6 +1,4 @@
-@(areas: List[Area], areaForm: Form[Area])
-
-@import helper._
+@(areas: List[Area])
 
 @main("London Lettings Wizard") {
 
@@ -11,6 +9,9 @@
     <li>
         @area.name
         @area.wealthScale.toString
+    </li>
+    <li>
+        @area.description
     </li>
 
     }

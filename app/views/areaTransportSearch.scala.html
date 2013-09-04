@@ -8,15 +8,13 @@
 @form(routes.AreaController.areaTransportFiltered()) {
 
     @inputText(areaForm("rateTransport"))
-    <input type="hidden" name="areas" value='field("id").value' >
     <input type="submit" value="Search">
 
 }
 
-
-
-
-
+    @form(routes.AreaController.areaShow()) {
+        <input type="submit" value="Skip this filter">
+    }
 
 
 }
