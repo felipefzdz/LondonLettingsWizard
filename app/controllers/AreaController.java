@@ -4,6 +4,7 @@ import models.*;
 import play.data.Form;
 import play.mvc.Controller;
 import play.mvc.Result;
+import utils.AreaComparator;
 import views.html.areaPriceSearch;
 import views.html.areaRateSearch;
 import views.html.areaShow;
@@ -13,8 +14,6 @@ import java.util.*;
 import static play.data.Form.form;
 
 public class AreaController extends Controller {
-
-    public static final int TOP_AREAS = 6;
 
     static Form<AreaFilter> areaFilterForm = form(AreaFilter.class);
 
@@ -36,49 +35,19 @@ public class AreaController extends Controller {
         List<Area> areas = Area.all();
         TreeMap<Integer, Area> mapArea = new TreeMap<Integer, Area>(new AreaComparator());
         for(Area area: areas){
-            Integer endRate = calculateEndRate(area, filledForm);
+            Integer endRate = Rate.calculateEndRate(area, getAreaFilter(filledForm));
             mapArea.put(endRate, area);
         }
         return ok(
-                areaShow.render(mapArea, getTopAreas(mapArea), filledForm.data())
+                areaShow.render(mapArea, Area.getTopAreas(mapArea), filledForm.data())
         );
     }
 
-    private static Integer calculateEndRate(Area area, Form<AreaFilter> filledForm) {
-        Integer rateTransport = Integer.valueOf(filledForm.data().get("rateTransport"));
-        Integer greenSpaces = Integer.valueOf(filledForm.data().get("greenSpaces"));
-        Integer nightLife = Integer.valueOf(filledForm.data().get("nightLife"));
-        Integer moneyValue = Integer.valueOf(filledForm.data().get("moneyValue"));
-        Integer price = Integer.valueOf(session().get("price"));
-        Integer bedrooms = Integer.valueOf(session().get("bedrooms"));
-        Rate rate = area.rate;
-        int rateTransportEndRate = rate.rateTransport - rateTransport;
-        int greenSpacesEndRate = rate.greenSpaces - greenSpaces;
-        int nightLifeEndRate = rate.nightLife - nightLife;
-        int moneyValueEndRate = rate.moneyValue - moneyValue;
-        int composeEndRate = rateTransportEndRate + greenSpacesEndRate + nightLifeEndRate + moneyValueEndRate;
-        WealthScale wealthScale = WealthScale.calculateWealthScale(price, Price.findByAreaAndBedrooms(area, bedrooms));
-        return composeEndRate *  wealthScale.getRateWealthScale();
-    }
-
-    private static List<Area> getTopAreas(TreeMap<Integer, Area> mapArea) {
-        List<Area> topAreas = new ArrayList<Area>();
-        Iterator<Map.Entry<Integer, Area>> it = mapArea.entrySet().iterator();
-        int i= 0;
-        while (it.hasNext() && i < TOP_AREAS) {
-            topAreas.add(it.next().getValue());
-            i++;
-        }
-        return topAreas;
-    }
-
-    private static class AreaComparator implements Comparator<Integer>{
-
-        @Override
-        public int compare(Integer o1, Integer o2) {
-            int i = o2.compareTo(o1);
-            return i == 0 ? -1 : i;
-        }
+    private static AreaFilter getAreaFilter(Form<AreaFilter> filledForm) {
+        AreaFilter areaFilter = filledForm.get();
+        areaFilter.setBedrooms(Integer.valueOf(session().get("bedrooms")));
+        areaFilter.setPrice(Integer.valueOf(session().get("price")));
+        return areaFilter;
     }
 
 }
