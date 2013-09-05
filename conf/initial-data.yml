@@ -4,669 +4,717 @@ rates:
 
      - !!models.Rate
          id:              1
-         rateTransport:   9
-         greenSpaces:     4
-         nightLife:       6
+         rateTransport:   6
+         greenSpaces:     10
+         nightLife:       8
 
      - !!models.Rate
          id:              2
          rateTransport:   5
-         greenSpaces:     3
-         nightLife:       8
+         greenSpaces:     10
+         nightLife:       6
 
      - !!models.Rate
          id:              3
-         rateTransport:   4
-         greenSpaces:     9
+         rateTransport:   6
+         greenSpaces:     1
          nightLife:       9
 
      - !!models.Rate
          id:              4
-         rateTransport:   5
-         greenSpaces:     4
+         rateTransport:   6
+         greenSpaces:     6
          nightLife:       6
 
      - !!models.Rate
          id:              5
          rateTransport:   6
-         greenSpaces:     6
-         nightLife:       7
-
-     - !!models.Rate
-         id:              6
-         rateTransport:   4
-         greenSpaces:     9
+         greenSpaces:     8
          nightLife:       9
 
      - !!models.Rate
-         id:              7
-         rateTransport:   9
+         id:              6
+         rateTransport:   7
          greenSpaces:     4
-         nightLife:       6
+         nightLife:       7
+
+     - !!models.Rate
+         id:              7
+         rateTransport:   7
+         greenSpaces:     1
+         nightLife:       1
 
      - !!models.Rate
          id:              8
          rateTransport:   5
-         greenSpaces:     6
-         nightLife:       5
+         greenSpaces:     3
+         nightLife:       2
 
      - !!models.Rate
          id:              9
-         rateTransport:   4
-         greenSpaces:     9
-         nightLife:       9
+         rateTransport:   6
+         greenSpaces:     10
+         nightLife:       10
 
      - !!models.Rate
          id:              10
-         rateTransport:   9
-         greenSpaces:     4
-         nightLife:       6
-
-     - !!models.Rate
-         id:              11
-         rateTransport:   5
-         greenSpaces:     6
+         rateTransport:   6
+         greenSpaces:     9
          nightLife:       7
 
      - !!models.Rate
+         id:              11
+         rateTransport:   7
+         greenSpaces:     4
+         nightLife:       2
+
+     - !!models.Rate
          id:              12
-         rateTransport:   4
-         greenSpaces:     9
-         nightLife:       9
+         rateTransport:   7
+         greenSpaces:     3
+         nightLife:       4
 
      - !!models.Rate
          id:              13
-         rateTransport:   9
-         greenSpaces:     2
+         rateTransport:   3
+         greenSpaces:     8
          nightLife:       6
 
      - !!models.Rate
          id:              14
-         rateTransport:   5
-         greenSpaces:     6
+         rateTransport:   4
+         greenSpaces:     9
          nightLife:       7
 
      - !!models.Rate
          id:              15
-         rateTransport:   4
-         greenSpaces:     9
-         nightLife:       9
+         rateTransport:   2
+         greenSpaces:     7
+         nightLife:       7
 
      - !!models.Rate
          id:              16
-         rateTransport:   9
-         greenSpaces:     4
+         rateTransport:   6
+         greenSpaces:     7
          nightLife:       6
 
      - !!models.Rate
          id:              17
-         rateTransport:   5
-         greenSpaces:     6
-         nightLife:       6
+         rateTransport:   6
+         greenSpaces:     10
+         nightLife:       9
 
      - !!models.Rate
          id:              18
-         rateTransport:   4
-         greenSpaces:     9
-         nightLife:       9
+         rateTransport:   6
+         greenSpaces:     5
+         nightLife:       1
 
      - !!models.Rate
          id:              19
-         rateTransport:   9
-         greenSpaces:     4
-         nightLife:       6
+         rateTransport:   6
+         greenSpaces:     3
+         nightLife:       1
 
      - !!models.Rate
          id:              20
-         rateTransport:   5
-         greenSpaces:     6
-         nightLife:       5
+         rateTransport:   6
+         greenSpaces:     5
+         nightLife:       1
 
      - !!models.Rate
          id:              21
-         rateTransport:   4
+         rateTransport:   5
          greenSpaces:     9
-         nightLife:       9
+         nightLife:       10
 
      - !!models.Rate
          id:              22
-         rateTransport:   9
-         greenSpaces:     4
+         rateTransport:   6
+         greenSpaces:     3
          nightLife:       6
 
      - !!models.Rate
          id:              23
          rateTransport:   5
-         greenSpaces:     6
-         nightLife:       7
+         greenSpaces:     9
+         nightLife:       10
 
      - !!models.Rate
          id:              24
-         rateTransport:   4
-         greenSpaces:     9
-         nightLife:       9
+         rateTransport:   5
+         greenSpaces:     10
+         nightLife:       5
 
      - !!models.Rate
          id:              25
-         rateTransport:   9
-         greenSpaces:     4
-         nightLife:       6
+         rateTransport:   7
+         greenSpaces:     3
+         nightLife:       9
 
      - !!models.Rate
          id:              26
          rateTransport:   5
-         greenSpaces:     6
-         nightLife:       7
+         greenSpaces:     8
+         nightLife:       9
 
      - !!models.Rate
          id:              27
-         rateTransport:   4
+         rateTransport:   6
+         greenSpaces:     8
+         nightLife:       8
+
+     - !!models.Rate
+         id:              28
+         rateTransport:   6
          greenSpaces:     9
          nightLife:       9
 
      - !!models.Rate
-         id:              28
-         rateTransport:   9
-         greenSpaces:     4
-         nightLife:       6
-
-     - !!models.Rate
          id:              29
-         rateTransport:   5
-         greenSpaces:     6
-         nightLife:       7
+         rateTransport:   8
+         greenSpaces:     4
+         nightLife:       5
 
      - !!models.Rate
          id:              30
-         rateTransport:   4
-         greenSpaces:     9
+         rateTransport:   6
+         greenSpaces:     10
          nightLife:       9
 
      - !!models.Rate
          id:              31
-         rateTransport:   9
-         greenSpaces:     4
-         nightLife:       6
+         rateTransport:   5
+         greenSpaces:     1
+         nightLife:       4
 
      - !!models.Rate
          id:              32
-         rateTransport:   5
-         greenSpaces:     6
-         nightLife:       7
+         rateTransport:   6
+         greenSpaces:     4
+         nightLife:       8
 
      - !!models.Rate
          id:              33
-         rateTransport:   4
-         greenSpaces:     9
-         nightLife:       9
+         rateTransport:   6
+         greenSpaces:     3
+         nightLife:       3
 
      - !!models.Rate
          id:              34
-         rateTransport:   9
-         greenSpaces:     4
+         rateTransport:   7
+         greenSpaces:     6
          nightLife:       6
 
      - !!models.Rate
          id:              35
-         rateTransport:   5
+         rateTransport:   7
          greenSpaces:     6
-         nightLife:       7
+         nightLife:       4
 
      - !!models.Rate
          id:              36
-         rateTransport:   4
-         greenSpaces:     9
-         nightLife:       9
+         rateTransport:   6
+         greenSpaces:     10
+         nightLife:       7
 
      - !!models.Rate
          id:              37
-         rateTransport:   9
-         greenSpaces:     4
-         nightLife:       6
+         rateTransport:   7
+         greenSpaces:     7
+         nightLife:       4
 
      - !!models.Rate
          id:              38
-         rateTransport:   5
-         greenSpaces:     6
-         nightLife:       7
+         rateTransport:   7
+         greenSpaces:     1
+         nightLife:       10
 
      - !!models.Rate
          id:              39
-         rateTransport:   4
-         greenSpaces:     9
-         nightLife:       9
-
-     - !!models.Rate
-         id:              40
-         rateTransport:   9
-         greenSpaces:     4
-         nightLife:       6
-
-     - !!models.Rate
-         id:              41
-         rateTransport:   5
-         greenSpaces:     6
+         rateTransport:   6
+         greenSpaces:     10
          nightLife:       7
 
      - !!models.Rate
-         id:              42
-         rateTransport:   4
-         greenSpaces:     9
+         id:              40
+         rateTransport:   6
+         greenSpaces:     4
          nightLife:       9
 
      - !!models.Rate
-         id:              43
-         rateTransport:   9
+         id:              41
+         rateTransport:   8
          greenSpaces:     4
+         nightLife:       2
+
+     - !!models.Rate
+         id:              42
+         rateTransport:   6
+         greenSpaces:     5
          nightLife:       6
+
+     - !!models.Rate
+         id:              43
+         rateTransport:   6
+         greenSpaces:     1
+         nightLife:       7
 
      - !!models.Rate
          id:              44
          rateTransport:   5
-         greenSpaces:     6
-         nightLife:       7
+         greenSpaces:     8
+         nightLife:       4
 
      - !!models.Rate
          id:              45
-         rateTransport:   4
-         greenSpaces:     9
-         nightLife:       9
+         rateTransport:   8
+         greenSpaces:     3
+         nightLife:       1
 
      - !!models.Rate
          id:              46
-         rateTransport:   9
-         greenSpaces:     4
-         nightLife:       6
+         rateTransport:   7
+         greenSpaces:     6
+         nightLife:       3
 
      - !!models.Rate
          id:              47
-         rateTransport:   5
-         greenSpaces:     6
+         rateTransport:   8
+         greenSpaces:     1
          nightLife:       7
 
      - !!models.Rate
          id:              48
-         rateTransport:   4
-         greenSpaces:     9
-         nightLife:       9
+         rateTransport:   7
+         greenSpaces:     10
+         nightLife:       1
 
      - !!models.Rate
          id:              49
-         rateTransport:   9
-         greenSpaces:     4
-         nightLife:       6
-
-     - !!models.Rate
-         id:              50
          rateTransport:   5
-         greenSpaces:     6
+         greenSpaces:     7
          nightLife:       7
 
      - !!models.Rate
+         id:              50
+         rateTransport:   8
+         greenSpaces:     4
+         nightLife:       1
+
+     - !!models.Rate
          id:              51
-         rateTransport:   4
-         greenSpaces:     9
-         nightLife:       9
+         rateTransport:   5
+         greenSpaces:     10
+         nightLife:       7
 
      - !!models.Rate
          id:              52
-         rateTransport:   9
-         greenSpaces:     4
-         nightLife:       6
+         rateTransport:   7
+         greenSpaces:     3
+         nightLife:       1
 
      - !!models.Rate
          id:              53
          rateTransport:   5
-         greenSpaces:     6
-         nightLife:       7
+         greenSpaces:     10
+         nightLife:       8
 
      - !!models.Rate
          id:              54
-         rateTransport:   4
-         greenSpaces:     9
-         nightLife:       9
+         rateTransport:   7
+         greenSpaces:     6
+         nightLife:       8
 
      - !!models.Rate
          id:              55
-         rateTransport:   9
-         greenSpaces:     4
-         nightLife:       6
+         rateTransport:   5
+         greenSpaces:     1
+         nightLife:       9
 
      - !!models.Rate
          id:              56
          rateTransport:   5
-         greenSpaces:     6
+         greenSpaces:     7
          nightLife:       7
 
      - !!models.Rate
          id:              57
-         rateTransport:   4
-         greenSpaces:     9
-         nightLife:       9
+         rateTransport:   5
+         greenSpaces:     3
+         nightLife:       2
 
      - !!models.Rate
          id:              58
-         rateTransport:   9
-         greenSpaces:     4
-         nightLife:       6
-
-     - !!models.Rate
-         id:              59
          rateTransport:   5
          greenSpaces:     6
-         nightLife:       7
-
-     - !!models.Rate
-         id:              60
-         rateTransport:   4
-         greenSpaces:     9
          nightLife:       9
 
      - !!models.Rate
+         id:              59
+         rateTransport:   7
+         greenSpaces:     3
+         nightLife:       5
+
+     - !!models.Rate
+         id:              60
+         rateTransport:   6
+         greenSpaces:     3
+         nightLife:       5
+
+     - !!models.Rate
          id:              61
-         rateTransport:   9
-         greenSpaces:     4
-         nightLife:       6
+         rateTransport:   3
+         greenSpaces:     9
+         nightLife:       7
 
      - !!models.Rate
          id:              62
-         rateTransport:   5
-         greenSpaces:     6
-         nightLife:       7
+         rateTransport:   4
+         greenSpaces:     10
+         nightLife:       10
 
      - !!models.Rate
          id:              63
          rateTransport:   4
-         greenSpaces:     9
-         nightLife:       9
+         greenSpaces:     1
+         nightLife:       5
 
      - !!models.Rate
          id:              64
-         rateTransport:   9
-         greenSpaces:     4
-         nightLife:       6
+         rateTransport:   5
+         greenSpaces:     10
+         nightLife:       10
 
      - !!models.Rate
          id:              65
-         rateTransport:   5
-         greenSpaces:     6
-         nightLife:       7
+         rateTransport:   6
+         greenSpaces:     10
+         nightLife:       2
 
      - !!models.Rate
          id:              66
          rateTransport:   4
-         greenSpaces:     9
-         nightLife:       9
+         greenSpaces:     4
+         nightLife:       1
 
      - !!models.Rate
          id:              67
-         rateTransport:   9
-         greenSpaces:     4
-         nightLife:       6
+         rateTransport:   5
+         greenSpaces:     7
+         nightLife:       10
 
      - !!models.Rate
          id:              68
-         rateTransport:   5
-         greenSpaces:     6
-         nightLife:       7
+         rateTransport:   6
+         greenSpaces:     5
+         nightLife:       10
 
      - !!models.Rate
          id:              69
-         rateTransport:   4
-         greenSpaces:     9
+         rateTransport:   5
+         greenSpaces:     6
          nightLife:       9
 
      - !!models.Rate
          id:              70
-         rateTransport:   9
+         rateTransport:   5
          greenSpaces:     4
-         nightLife:       6
+         nightLife:       3
 
      - !!models.Rate
          id:              71
          rateTransport:   5
-         greenSpaces:     6
-         nightLife:       7
+         greenSpaces:     10
+         nightLife:       2
 
      - !!models.Rate
          id:              72
-         rateTransport:   4
-         greenSpaces:     9
-         nightLife:       9
+         rateTransport:   3
+         greenSpaces:     1
+         nightLife:       4
 
      - !!models.Rate
          id:              73
-         rateTransport:   9
+         rateTransport:   5
          greenSpaces:     4
-         nightLife:       6
+         nightLife:       7
 
      - !!models.Rate
          id:              74
          rateTransport:   5
          greenSpaces:     6
-         nightLife:       7
+         nightLife:       6
 
      - !!models.Rate
          id:              75
-         rateTransport:   4
+         rateTransport:   5
          greenSpaces:     9
-         nightLife:       9
+         nightLife:       8
 
      - !!models.Rate
          id:              76
-         rateTransport:   9
-         greenSpaces:     4
-         nightLife:       6
+         rateTransport:   5
+         greenSpaces:     3
+         nightLife:       8
 
      - !!models.Rate
          id:              77
          rateTransport:   5
-         greenSpaces:     6
-         nightLife:       7
+         greenSpaces:     7
+         nightLife:       3
 
      - !!models.Rate
          id:              78
-         rateTransport:   4
+         rateTransport:   6
          greenSpaces:     9
-         nightLife:       9
+         nightLife:       3
 
      - !!models.Rate
          id:              79
-         rateTransport:   9
+         rateTransport:   5
          greenSpaces:     4
-         nightLife:       6
+         nightLife:       8
 
      - !!models.Rate
          id:              80
-         rateTransport:   5
-         greenSpaces:     6
-         nightLife:       7
+         rateTransport:   7
+         greenSpaces:     1
+         nightLife:       3
 
      - !!models.Rate
          id:              81
-         rateTransport:   4
+         rateTransport:   7
          greenSpaces:     9
-         nightLife:       9
+         nightLife:       10
 
      - !!models.Rate
          id:              82
-         rateTransport:   9
-         greenSpaces:     4
-         nightLife:       6
+         rateTransport:   6
+         greenSpaces:     5
+         nightLife:       8
 
      - !!models.Rate
          id:              83
-         rateTransport:   5
-         greenSpaces:     6
-         nightLife:       7
+         rateTransport:   6
+         greenSpaces:     10
+         nightLife:       3
 
      - !!models.Rate
          id:              84
-         rateTransport:   4
-         greenSpaces:     9
-         nightLife:       9
+         rateTransport:   5
+         greenSpaces:     2
+         nightLife:       1
 
      - !!models.Rate
          id:              85
-         rateTransport:   9
-         greenSpaces:     4
-         nightLife:       6
+         rateTransport:   5
+         greenSpaces:     6
+         nightLife:       3
 
      - !!models.Rate
          id:              86
          rateTransport:   5
-         greenSpaces:     6
-         nightLife:       7
+         greenSpaces:     3
+         nightLife:       9
 
      - !!models.Rate
          id:              87
-         rateTransport:   4
-         greenSpaces:     9
-         nightLife:       9
+         rateTransport:   7
+         greenSpaces:     10
+         nightLife:       8
 
      - !!models.Rate
          id:              88
-         rateTransport:   9
+         rateTransport:   6
          greenSpaces:     4
-         nightLife:       6
+         nightLife:       1
 
      - !!models.Rate
          id:              89
-         rateTransport:   5
-         greenSpaces:     6
-         nightLife:       7
+         rateTransport:   6
+         greenSpaces:     4
+         nightLife:       5
 
      - !!models.Rate
          id:              90
-         rateTransport:   4
-         greenSpaces:     9
-         nightLife:       9
+         rateTransport:   6
+         greenSpaces:     1
+         nightLife:       5
 
      - !!models.Rate
          id:              91
-         rateTransport:   9
-         greenSpaces:     4
-         nightLife:       6
+         rateTransport:   5
+         greenSpaces:     10
+         nightLife:       4
 
      - !!models.Rate
          id:              92
-         rateTransport:   5
-         greenSpaces:     6
-         nightLife:       7
+         rateTransport:   6
+         greenSpaces:     7
+         nightLife:       6
 
      - !!models.Rate
          id:              93
-         rateTransport:   4
-         greenSpaces:     9
-         nightLife:       9
+         rateTransport:   7
+         greenSpaces:     1
+         nightLife:       5
 
      - !!models.Rate
          id:              94
-         rateTransport:   9
-         greenSpaces:     4
+         rateTransport:   8
+         greenSpaces:     9
          nightLife:       6
 
      - !!models.Rate
          id:              95
-         rateTransport:   5
-         greenSpaces:     6
-         nightLife:       7
+         rateTransport:   6
+         greenSpaces:     3
+         nightLife:       4
 
      - !!models.Rate
          id:              96
-         rateTransport:   4
-         greenSpaces:     9
-         nightLife:       9
+         rateTransport:   7
+         greenSpaces:     7
+         nightLife:       2
 
      - !!models.Rate
          id:              97
-         rateTransport:   5
-         greenSpaces:     6
-         nightLife:       7
+         rateTransport:   6
+         greenSpaces:     5
+         nightLife:       4
 
      - !!models.Rate
          id:              98
-         rateTransport:   4
-         greenSpaces:     9
-         nightLife:       9
+         rateTransport:   7
+         greenSpaces:     10
+         nightLife:       3
 
      - !!models.Rate
          id:              99
-         rateTransport:   5
-         greenSpaces:     6
-         nightLife:       7
+         rateTransport:   7
+         greenSpaces:     1
+         nightLife:       3
 
      - !!models.Rate
          id:              100
-         rateTransport:   4
+         rateTransport:   8
          greenSpaces:     9
-         nightLife:       9
+         nightLife:       3
 
      - !!models.Rate
          id:              101
-         rateTransport:   5
-         greenSpaces:     6
-         nightLife:       7
+         rateTransport:   7
+         greenSpaces:     7
+         nightLife:       1
 
      - !!models.Rate
          id:              102
-         rateTransport:   4
-         greenSpaces:     9
-         nightLife:       9
-
-     - !!models.Rate
-         id:              103
-         rateTransport:   4
-         greenSpaces:     9
-         nightLife:       9
-
-     - !!models.Rate
-         id:              104
          rateTransport:   5
-         greenSpaces:     6
+         greenSpaces:     7
          nightLife:       7
 
      - !!models.Rate
+         id:              103
+         rateTransport:   6
+         greenSpaces:     1
+         nightLife:       3
+
+     - !!models.Rate
+         id:              104
+         rateTransport:   8
+         greenSpaces:     5
+         nightLife:       10
+
+     - !!models.Rate
          id:              105
-         rateTransport:   4
-         greenSpaces:     9
-         nightLife:       9
+         rateTransport:   6
+         greenSpaces:     10
+         nightLife:       3
 
      - !!models.Rate
          id:              106
-         rateTransport:   4
-         greenSpaces:     9
+         rateTransport:   5
+         greenSpaces:     2
          nightLife:       9
 
      - !!models.Rate
          id:              107
-         rateTransport:   5
-         greenSpaces:     6
-         nightLife:       7
+         rateTransport:   6
+         greenSpaces:     8
+         nightLife:       10
 
      - !!models.Rate
          id:              108
-         rateTransport:   4
-         greenSpaces:     9
+         rateTransport:   7
+         greenSpaces:     5
          nightLife:       9
 
      - !!models.Rate
          id:              109
-         rateTransport:   4
-         greenSpaces:     9
-         nightLife:       9
+         rateTransport:   6
+         greenSpaces:     7
+         nightLife:       1
 
      - !!models.Rate
          id:              110
-         rateTransport:   5
-         greenSpaces:     6
-         nightLife:       7
+         rateTransport:   7
+         greenSpaces:     5
+         nightLife:       1
 
      - !!models.Rate
          id:              111
-         rateTransport:   4
+         rateTransport:   7
+         greenSpaces:     6
+         nightLife:       4
+
+     - !!models.Rate
+         id:              112
+         rateTransport:   7
+         greenSpaces:     4
+         nightLife:       2
+
+     - !!models.Rate
+         id:              113
+         rateTransport:   8
+         greenSpaces:     10
+         nightLife:       4
+
+     - !!models.Rate
+         id:              114
+         rateTransport:   8
+         greenSpaces:     1
+         nightLife:       3
+
+     - !!models.Rate
+         id:              115
+         rateTransport:   8
+         greenSpaces:     4
+         nightLife:       3
+
+     - !!models.Rate
+         id:              116
+         rateTransport:   8
+         greenSpaces:     6
+         nightLife:       3
+
+     - !!models.Rate
+         id:              117
+         rateTransport:   8
          greenSpaces:     9
-         nightLife:       9
+         nightLife:       1
+
+     - !!models.Rate
+         id:              118
+         rateTransport:   9
+         greenSpaces:     3
+         nightLife:       7
+
+     - !!models.Rate
+         id:              119
+         rateTransport:   10
+         greenSpaces:     8
+         nightLife:       3
 
 # Areas
 
