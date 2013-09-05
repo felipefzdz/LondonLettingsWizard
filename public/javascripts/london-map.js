@@ -135,6 +135,8 @@ MAP = (function(){
 			fill = customFill;
 		}
 		
+		console.log(fill);
+		
 		raphaelShapeObject.attr({fill : fill, "stroke-width" : strokeWidth});
 	}
 	
@@ -142,6 +144,8 @@ MAP = (function(){
 	function PUBLIC_drawMap(canvas) {
 		
 		var mapCanvas = new Raphael(canvas, "100%", "100%");
+		mapCanvas.setViewBox(0,0,888,844,true);
+		
 		//Draw all London map shapes, assign to outcodes as representations
 		for (path in londonMapPaths) {
 			
@@ -164,12 +168,11 @@ MAP = (function(){
 		};
 		
 		for (postcode in postcodeScoreJSON) {
+			
 			var shapeToManipulate = outcodes[postcode].representation;
 			var thisFill = scoreToStyleMap[postcodeScoreJSON[postcode]];
 			
-			styleToApply = {
-				fill : thisFill
-			};
+			styleToApply = thisFill;
 			
 			shapeApplyStyle(shapeToManipulate, styleToApply);	
 		}
