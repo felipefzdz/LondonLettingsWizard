@@ -2,18 +2,20 @@
 @import helper._
 
 @main("London Lettings Wizard") {
+	
+<div class="wrapper">
+	<h2>Where should I live in London? <span class="title-specific">My preferences</span></h2>
+	
+	@form(routes.AreaController.areaRateFiltered()) {
+	
+	    @inputText(areaFilterForm("rateTransport"))
+	    @inputText(areaFilterForm("greenSpaces"))
+	    @inputText(areaFilterForm("nightLife"))
+	    @inputText(areaFilterForm("moneyValue"))
+	    <input type="submit" value="Search">	
+	}
 
-<h2>Search Areas By Transport</h2>
-
-@form(routes.AreaController.areaRateFiltered()) {
-
-    @inputText(areaFilterForm("rateTransport"))
-    @inputText(areaFilterForm("greenSpaces"))
-    @inputText(areaFilterForm("nightLife"))
-    @inputText(areaFilterForm("moneyValue"))
-    <input type="submit" value="Search">
-
-}
+</div>
 
 
 }
