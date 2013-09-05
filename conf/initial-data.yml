@@ -7,777 +7,666 @@ rates:
          rateTransport:   9
          greenSpaces:     4
          nightLife:       6
-         moneyValue:      8
 
      - !!models.Rate
          id:              2
          rateTransport:   5
          greenSpaces:     3
          nightLife:       8
-         moneyValue:      2
 
      - !!models.Rate
          id:              3
          rateTransport:   4
          greenSpaces:     9
          nightLife:       9
-         moneyValue:      6
 
      - !!models.Rate
          id:              4
          rateTransport:   5
          greenSpaces:     4
          nightLife:       6
-         moneyValue:      8
 
      - !!models.Rate
          id:              5
          rateTransport:   6
          greenSpaces:     6
          nightLife:       7
-         moneyValue:      2
 
      - !!models.Rate
          id:              6
          rateTransport:   4
          greenSpaces:     9
          nightLife:       9
-         moneyValue:      6
 
      - !!models.Rate
          id:              7
          rateTransport:   9
          greenSpaces:     4
          nightLife:       6
-         moneyValue:      8
 
      - !!models.Rate
          id:              8
          rateTransport:   5
          greenSpaces:     6
          nightLife:       5
-         moneyValue:      2
 
      - !!models.Rate
          id:              9
          rateTransport:   4
          greenSpaces:     9
          nightLife:       9
-         moneyValue:      6
 
      - !!models.Rate
          id:              10
          rateTransport:   9
          greenSpaces:     4
          nightLife:       6
-         moneyValue:      8
 
      - !!models.Rate
          id:              11
          rateTransport:   5
          greenSpaces:     6
          nightLife:       7
-         moneyValue:      2
 
      - !!models.Rate
          id:              12
          rateTransport:   4
          greenSpaces:     9
          nightLife:       9
-         moneyValue:      6
 
      - !!models.Rate
          id:              13
          rateTransport:   9
          greenSpaces:     2
          nightLife:       6
-         moneyValue:      8
 
      - !!models.Rate
          id:              14
          rateTransport:   5
          greenSpaces:     6
          nightLife:       7
-         moneyValue:      2
 
      - !!models.Rate
          id:              15
          rateTransport:   4
          greenSpaces:     9
          nightLife:       9
-         moneyValue:      6
 
      - !!models.Rate
          id:              16
          rateTransport:   9
          greenSpaces:     4
          nightLife:       6
-         moneyValue:      8
 
      - !!models.Rate
          id:              17
          rateTransport:   5
          greenSpaces:     6
          nightLife:       6
-         moneyValue:      2
 
      - !!models.Rate
          id:              18
          rateTransport:   4
          greenSpaces:     9
          nightLife:       9
-         moneyValue:      6
 
      - !!models.Rate
          id:              19
          rateTransport:   9
          greenSpaces:     4
          nightLife:       6
-         moneyValue:      8
 
      - !!models.Rate
          id:              20
          rateTransport:   5
          greenSpaces:     6
          nightLife:       5
-         moneyValue:      2
 
      - !!models.Rate
          id:              21
          rateTransport:   4
          greenSpaces:     9
          nightLife:       9
-         moneyValue:      6
 
      - !!models.Rate
          id:              22
          rateTransport:   9
          greenSpaces:     4
          nightLife:       6
-         moneyValue:      8
 
      - !!models.Rate
          id:              23
          rateTransport:   5
          greenSpaces:     6
          nightLife:       7
-         moneyValue:      2
 
      - !!models.Rate
          id:              24
          rateTransport:   4
          greenSpaces:     9
          nightLife:       9
-         moneyValue:      6
 
      - !!models.Rate
          id:              25
          rateTransport:   9
          greenSpaces:     4
          nightLife:       6
-         moneyValue:      8
 
      - !!models.Rate
          id:              26
          rateTransport:   5
          greenSpaces:     6
          nightLife:       7
-         moneyValue:      2
 
      - !!models.Rate
          id:              27
          rateTransport:   4
          greenSpaces:     9
          nightLife:       9
-         moneyValue:      6
 
      - !!models.Rate
          id:              28
          rateTransport:   9
          greenSpaces:     4
          nightLife:       6
-         moneyValue:      8
 
      - !!models.Rate
          id:              29
          rateTransport:   5
          greenSpaces:     6
          nightLife:       7
-         moneyValue:      2
 
      - !!models.Rate
          id:              30
          rateTransport:   4
          greenSpaces:     9
          nightLife:       9
-         moneyValue:      6
 
      - !!models.Rate
          id:              31
          rateTransport:   9
          greenSpaces:     4
          nightLife:       6
-         moneyValue:      8
 
      - !!models.Rate
          id:              32
          rateTransport:   5
          greenSpaces:     6
          nightLife:       7
-         moneyValue:      2
 
      - !!models.Rate
          id:              33
          rateTransport:   4
          greenSpaces:     9
          nightLife:       9
-         moneyValue:      6
 
      - !!models.Rate
          id:              34
          rateTransport:   9
          greenSpaces:     4
          nightLife:       6
-         moneyValue:      8
 
      - !!models.Rate
          id:              35
          rateTransport:   5
          greenSpaces:     6
          nightLife:       7
-         moneyValue:      2
 
      - !!models.Rate
          id:              36
          rateTransport:   4
          greenSpaces:     9
          nightLife:       9
-         moneyValue:      6
 
      - !!models.Rate
          id:              37
          rateTransport:   9
          greenSpaces:     4
          nightLife:       6
-         moneyValue:      8
 
      - !!models.Rate
          id:              38
          rateTransport:   5
          greenSpaces:     6
          nightLife:       7
-         moneyValue:      2
 
      - !!models.Rate
          id:              39
          rateTransport:   4
          greenSpaces:     9
          nightLife:       9
-         moneyValue:      6
 
      - !!models.Rate
          id:              40
          rateTransport:   9
          greenSpaces:     4
          nightLife:       6
-         moneyValue:      8
 
      - !!models.Rate
          id:              41
          rateTransport:   5
          greenSpaces:     6
          nightLife:       7
-         moneyValue:      2
 
      - !!models.Rate
          id:              42
          rateTransport:   4
          greenSpaces:     9
          nightLife:       9
-         moneyValue:      6
 
      - !!models.Rate
          id:              43
          rateTransport:   9
          greenSpaces:     4
          nightLife:       6
-         moneyValue:      8
 
      - !!models.Rate
          id:              44
          rateTransport:   5
          greenSpaces:     6
          nightLife:       7
-         moneyValue:      2
 
      - !!models.Rate
          id:              45
          rateTransport:   4
          greenSpaces:     9
          nightLife:       9
-         moneyValue:      6
 
      - !!models.Rate
          id:              46
          rateTransport:   9
          greenSpaces:     4
          nightLife:       6
-         moneyValue:      8
 
      - !!models.Rate
          id:              47
          rateTransport:   5
          greenSpaces:     6
          nightLife:       7
-         moneyValue:      2
 
      - !!models.Rate
          id:              48
          rateTransport:   4
          greenSpaces:     9
          nightLife:       9
-         moneyValue:      6
 
      - !!models.Rate
          id:              49
          rateTransport:   9
          greenSpaces:     4
          nightLife:       6
-         moneyValue:      8
 
      - !!models.Rate
          id:              50
          rateTransport:   5
          greenSpaces:     6
          nightLife:       7
-         moneyValue:      2
 
      - !!models.Rate
          id:              51
          rateTransport:   4
          greenSpaces:     9
          nightLife:       9
-         moneyValue:      6
 
      - !!models.Rate
          id:              52
          rateTransport:   9
          greenSpaces:     4
          nightLife:       6
-         moneyValue:      8
 
      - !!models.Rate
          id:              53
          rateTransport:   5
          greenSpaces:     6
          nightLife:       7
-         moneyValue:      2
 
      - !!models.Rate
          id:              54
          rateTransport:   4
          greenSpaces:     9
          nightLife:       9
-         moneyValue:      6
 
      - !!models.Rate
          id:              55
          rateTransport:   9
          greenSpaces:     4
          nightLife:       6
-         moneyValue:      8
 
      - !!models.Rate
          id:              56
          rateTransport:   5
          greenSpaces:     6
          nightLife:       7
-         moneyValue:      2
 
      - !!models.Rate
          id:              57
          rateTransport:   4
          greenSpaces:     9
          nightLife:       9
-         moneyValue:      6
 
      - !!models.Rate
          id:              58
          rateTransport:   9
          greenSpaces:     4
          nightLife:       6
-         moneyValue:      8
 
      - !!models.Rate
          id:              59
          rateTransport:   5
          greenSpaces:     6
          nightLife:       7
-         moneyValue:      2
 
      - !!models.Rate
          id:              60
          rateTransport:   4
          greenSpaces:     9
          nightLife:       9
-         moneyValue:      6
 
      - !!models.Rate
          id:              61
          rateTransport:   9
          greenSpaces:     4
          nightLife:       6
-         moneyValue:      8
 
      - !!models.Rate
          id:              62
          rateTransport:   5
          greenSpaces:     6
          nightLife:       7
-         moneyValue:      2
 
      - !!models.Rate
          id:              63
          rateTransport:   4
          greenSpaces:     9
          nightLife:       9
-         moneyValue:      6
 
      - !!models.Rate
          id:              64
          rateTransport:   9
          greenSpaces:     4
          nightLife:       6
-         moneyValue:      8
 
      - !!models.Rate
          id:              65
          rateTransport:   5
          greenSpaces:     6
          nightLife:       7
-         moneyValue:      2
 
      - !!models.Rate
          id:              66
          rateTransport:   4
          greenSpaces:     9
          nightLife:       9
-         moneyValue:      6
 
      - !!models.Rate
          id:              67
          rateTransport:   9
          greenSpaces:     4
          nightLife:       6
-         moneyValue:      8
 
      - !!models.Rate
          id:              68
          rateTransport:   5
          greenSpaces:     6
          nightLife:       7
-         moneyValue:      2
 
      - !!models.Rate
          id:              69
          rateTransport:   4
          greenSpaces:     9
          nightLife:       9
-         moneyValue:      6
 
      - !!models.Rate
          id:              70
          rateTransport:   9
          greenSpaces:     4
          nightLife:       6
-         moneyValue:      8
 
      - !!models.Rate
          id:              71
          rateTransport:   5
          greenSpaces:     6
          nightLife:       7
-         moneyValue:      2
 
      - !!models.Rate
          id:              72
          rateTransport:   4
          greenSpaces:     9
          nightLife:       9
-         moneyValue:      6
 
      - !!models.Rate
          id:              73
          rateTransport:   9
          greenSpaces:     4
          nightLife:       6
-         moneyValue:      8
 
      - !!models.Rate
          id:              74
          rateTransport:   5
          greenSpaces:     6
          nightLife:       7
-         moneyValue:      2
 
      - !!models.Rate
          id:              75
          rateTransport:   4
          greenSpaces:     9
          nightLife:       9
-         moneyValue:      6
 
      - !!models.Rate
          id:              76
          rateTransport:   9
          greenSpaces:     4
          nightLife:       6
-         moneyValue:      8
 
      - !!models.Rate
          id:              77
          rateTransport:   5
          greenSpaces:     6
          nightLife:       7
-         moneyValue:      2
 
      - !!models.Rate
          id:              78
          rateTransport:   4
          greenSpaces:     9
          nightLife:       9
-         moneyValue:      6
 
      - !!models.Rate
          id:              79
          rateTransport:   9
          greenSpaces:     4
          nightLife:       6
-         moneyValue:      8
 
      - !!models.Rate
          id:              80
          rateTransport:   5
          greenSpaces:     6
          nightLife:       7
-         moneyValue:      2
 
      - !!models.Rate
          id:              81
          rateTransport:   4
          greenSpaces:     9
          nightLife:       9
-         moneyValue:      6
 
      - !!models.Rate
          id:              82
          rateTransport:   9
          greenSpaces:     4
          nightLife:       6
-         moneyValue:      8
 
      - !!models.Rate
          id:              83
          rateTransport:   5
          greenSpaces:     6
          nightLife:       7
-         moneyValue:      2
 
      - !!models.Rate
          id:              84
          rateTransport:   4
          greenSpaces:     9
          nightLife:       9
-         moneyValue:      6
 
      - !!models.Rate
          id:              85
          rateTransport:   9
          greenSpaces:     4
          nightLife:       6
-         moneyValue:      8
 
      - !!models.Rate
          id:              86
          rateTransport:   5
          greenSpaces:     6
          nightLife:       7
-         moneyValue:      2
 
      - !!models.Rate
          id:              87
          rateTransport:   4
          greenSpaces:     9
          nightLife:       9
-         moneyValue:      6
 
      - !!models.Rate
          id:              88
          rateTransport:   9
          greenSpaces:     4
          nightLife:       6
-         moneyValue:      8
 
      - !!models.Rate
          id:              89
          rateTransport:   5
          greenSpaces:     6
          nightLife:       7
-         moneyValue:      2
 
      - !!models.Rate
          id:              90
          rateTransport:   4
          greenSpaces:     9
          nightLife:       9
-         moneyValue:      6
 
      - !!models.Rate
          id:              91
          rateTransport:   9
          greenSpaces:     4
          nightLife:       6
-         moneyValue:      8
 
      - !!models.Rate
          id:              92
          rateTransport:   5
          greenSpaces:     6
          nightLife:       7
-         moneyValue:      2
 
      - !!models.Rate
          id:              93
          rateTransport:   4
          greenSpaces:     9
          nightLife:       9
-         moneyValue:      6
 
      - !!models.Rate
          id:              94
          rateTransport:   9
          greenSpaces:     4
          nightLife:       6
-         moneyValue:      8
 
      - !!models.Rate
          id:              95
          rateTransport:   5
          greenSpaces:     6
          nightLife:       7
-         moneyValue:      2
 
      - !!models.Rate
          id:              96
          rateTransport:   4
          greenSpaces:     9
          nightLife:       9
-         moneyValue:      6
 
      - !!models.Rate
          id:              97
          rateTransport:   5
          greenSpaces:     6
          nightLife:       7
-         moneyValue:      2
 
      - !!models.Rate
          id:              98
          rateTransport:   4
          greenSpaces:     9
          nightLife:       9
-         moneyValue:      6
 
      - !!models.Rate
          id:              99
          rateTransport:   5
          greenSpaces:     6
          nightLife:       7
-         moneyValue:      2
 
      - !!models.Rate
          id:              100
          rateTransport:   4
          greenSpaces:     9
          nightLife:       9
-         moneyValue:      6
 
      - !!models.Rate
          id:              101
          rateTransport:   5
          greenSpaces:     6
          nightLife:       7
-         moneyValue:      2
 
      - !!models.Rate
          id:              102
          rateTransport:   4
          greenSpaces:     9
          nightLife:       9
-         moneyValue:      6
 
      - !!models.Rate
          id:              103
          rateTransport:   4
          greenSpaces:     9
          nightLife:       9
-         moneyValue:      6
 
      - !!models.Rate
          id:              104
          rateTransport:   5
          greenSpaces:     6
          nightLife:       7
-         moneyValue:      2
 
      - !!models.Rate
          id:              105
          rateTransport:   4
          greenSpaces:     9
          nightLife:       9
-         moneyValue:      6
 
      - !!models.Rate
          id:              106
          rateTransport:   4
          greenSpaces:     9
          nightLife:       9
-         moneyValue:      6
 
      - !!models.Rate
          id:              107
          rateTransport:   5
          greenSpaces:     6
          nightLife:       7
-         moneyValue:      2
 
      - !!models.Rate
          id:              108
          rateTransport:   4
          greenSpaces:     9
          nightLife:       9
-         moneyValue:      6
 
      - !!models.Rate
          id:              109
          rateTransport:   4
          greenSpaces:     9
          nightLife:       9
-         moneyValue:      6
 
      - !!models.Rate
          id:              110
          rateTransport:   5
          greenSpaces:     6
          nightLife:       7
-         moneyValue:      2
 
      - !!models.Rate
          id:              111
          rateTransport:   4
          greenSpaces:     9
          nightLife:       9
-         moneyValue:      6
 
 # Areas
 

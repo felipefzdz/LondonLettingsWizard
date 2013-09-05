@@ -17,7 +17,6 @@ public class Rate {
 
     public int nightLife;
 
-    public int moneyValue;
 
     public static Model.Finder<Long,Rate> find = new Model.Finder<Long, Rate>(
             Long.class, Rate.class
@@ -27,23 +26,23 @@ public class Rate {
 
     }
 
-    public Rate(Long id, int rateTransport, int greenSpaces, int nightLife, int moneyValue) {
+    public Rate(Long id, int rateTransport, int greenSpaces, int nightLife) {
         this.id = id;
         this.rateTransport = rateTransport;
         this.greenSpaces = greenSpaces;
         this.nightLife = nightLife;
-        this.moneyValue = moneyValue;
     }
 
-    public static Integer calculateEndRate(Area area, AreaFilter areaFilter) {
+    public static Double calculateEndRate(Area area, AreaFilter areaFilter) {
         int composeEndRate = area.rate.getSumEndRateWithoutWealthScaleFactor(areaFilter);
         WealthScale wealthScale = WealthScale.calculateWealthScale(areaFilter.price, Price.findByAreaIdAndBedrooms(area.id, areaFilter.bedrooms));
-        return composeEndRate + wealthScale.getRateWealthScale();
+        return composeEndRate + WealthScale.getCalculatedWealthScale(wealthScale, areaFilter.moneyValue);
     }
+
 
     private int getSumEndRateWithoutWealthScaleFactor(AreaFilter areaFilter){
         return getDifferenceRateTransport(areaFilter.rateTransport) + getDifferenceGreenSpaces(areaFilter.greenSpaces)
-                + getDifferenceNightLife(areaFilter.nightLife) + getDifferenceMoneyValue(areaFilter.moneyValue);
+                + getDifferenceNightLife(areaFilter.nightLife);
     }
 
     private int getDifferenceRateTransport(int other){
@@ -58,9 +57,7 @@ public class Rate {
         return nightLife - other;
     }
 
-    private int getDifferenceMoneyValue(int other){
-        return moneyValue - other;
-    }
+
 
 
 }

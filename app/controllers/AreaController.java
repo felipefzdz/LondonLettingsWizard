@@ -35,7 +35,7 @@ public class AreaController extends Controller {
         List<Area> areas = Area.all();
         TreeMap<Integer, Area> mapArea = new TreeMap<Integer, Area>(new AreaComparator());
         for(Area area: areas){
-            Integer endRate = Rate.calculateEndRate(area, getAreaFilter(filledForm));
+            Integer endRate = Rate.calculateEndRate(area, getAreaFilter(filledForm)).intValue();
             mapArea.put(endRate, area);
         }
         return ok(

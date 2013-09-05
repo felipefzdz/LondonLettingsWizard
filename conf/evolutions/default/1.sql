@@ -27,7 +27,6 @@ create table rate (
   rate_transport            integer,
   green_spaces              integer,
   night_life                integer,
-  money_value               integer,
   constraint pk_rate primary key (id))
 ;
 
