@@ -29,6 +29,7 @@ div.wrapper {
 }
 
 div.wrapper-large {
+	margin-top: 160px;
 	width: 1024px;
 }
 
@@ -136,4 +137,6 @@ dl.largeform .di {
 }
 
 /*result mgmt*/
-
+#outcode-results {
+	display: none;
+}
