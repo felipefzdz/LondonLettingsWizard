@@ -39,6 +39,13 @@ public class Price extends Model{
         this.halfPrice = halfPrice;
     }
 
+    public static Price findByAreaAndBedrooms(Area area, int bedrooms) {
+        return find.where()
+                .eq("area", area)
+                .eq("bedrooms", bedrooms)
+                .findUnique();
+    }
+
 
 
 

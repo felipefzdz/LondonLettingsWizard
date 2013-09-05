@@ -9,31 +9,34 @@ package models;
  */
 public enum WealthScale {
 
-    VERYLOW, LOW, AVERAGE, HIGH, VERYHIGH;
+    OUTOFRANGE(0), VERYLOW(1), LOW(2), AVERAGE(3), HIGH(4), VERYHIGH(5);
 
-    /**
-     *
-     * @param providedPrice
-     * @param price
-     * @return
-     * throws IllegalArgumentException if the providedPrice is less than the minPrice included in price or is greater than maxPrice included in price.
-     */
+
+    private int rateWealthScale;
+
+    private WealthScale(int rateWealthScale){
+        this.rateWealthScale = rateWealthScale;
+    }
     public static WealthScale calculateWealthScale(int providedPrice, Price price){
-        if (providedPrice == price.halfPrice){
-            return AVERAGE;
+        if (providedPrice >= price.maxPrice){
+            return VERYHIGH;
+        }
+        if (providedPrice < price.minPrice){
+            return OUTOFRANGE;
         }
         if (providedPrice == price.minPrice){
             return VERYLOW;
         }
-        if (providedPrice == price.maxPrice){
-            return VERYHIGH;
+        if (providedPrice == price.halfPrice){
+            return AVERAGE;
         }
         if (providedPrice < price.halfPrice){
             return LOW;
         }
-        if (providedPrice > price.halfPrice){
-            return HIGH;
-        }
-        throw new IllegalArgumentException("The provided price should be in the range");
+        return HIGH;
+    }
+
+    public int getRateWealthScale() {
+        return rateWealthScale;
     }
 }

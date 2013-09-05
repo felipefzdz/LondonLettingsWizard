@@ -1,0 +1,20 @@
+@(areaFilterForm: Form[AreaFilter])
+@import helper._
+
+@main("London Lettings Wizard") {
+
+<h2>Search Areas By Transport</h2>
+
+@form(routes.AreaController.areaRateFiltered()) {
+
+    @inputText(areaFilterForm("rateTransport"))
+    @inputText(areaFilterForm("greenSpaces"))
+    @inputText(areaFilterForm("nightLife"))
+    @inputText(areaFilterForm("moneyValue"))
+    <input type="submit" value="Search">
+
+}
+
+
+}
+

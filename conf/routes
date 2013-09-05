@@ -8,8 +8,7 @@ GET         /                        controllers.Application.index()
 # Areas
 GET         /areaPriceSearch         controllers.AreaController.areaPriceSearch()
 GET         /areasPriceFiltered      controllers.AreaController.areaPriceFiltered()
-GET         /areasTransportFiltered  controllers.AreaController.areaTransportFiltered()
-GET         /areaShow                controllers.AreaController.areaShow()
+GET         /areasTransportFiltered  controllers.AreaController.areaRateFiltered()
 
 # Map static resources from the /public folder to the /assets URL path
 GET         /assets/*file            controllers.Assets.at(path="/public", file)

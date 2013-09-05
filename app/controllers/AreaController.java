@@ -1,73 +1,77 @@
 package controllers;
 
 import models.*;
+import play.api.mvc.Session;
 import play.cache.Cache;
 import play.data.Form;
 import play.mvc.Controller;
 import play.mvc.Result;
 import views.html.areaPriceSearch;
-import views.html.areaTransportSearch;
+import views.html.areaRateSearch;
 import views.html.areaShow;
 
-import java.util.List;
+import java.util.*;
 
 import static play.data.Form.form;
 
 public class AreaController extends Controller {
 
-    static Form<Area> areaForm = form(Area.class);
+    public static final int TOP_AREAS = 2;
 
-    static Form<FilterPrice> filterPriceForm = form(FilterPrice.class);
-
+    static Form<AreaFilter> areaFilterForm = form(AreaFilter.class);
 
     public static Result areaPriceSearch(){
         return ok(
-                areaPriceSearch.render(filterPriceForm)
+                areaPriceSearch.render(areaFilterForm)
         );
     }
 
     public static Result areaPriceFiltered() {
-        Form<FilterPrice> filledForm = filterPriceForm.bindFromRequest();
-        Integer price = Integer.valueOf(filledForm.data().get("price"));
-        Integer bedrooms = Integer.valueOf(filledForm.data().get("bedrooms"));
-        List<Area> areas = Area.findAreasPriceInRange(price, bedrooms);
-        addAreasToCache(areas);
-        return ok(areaTransportSearch.render(areaForm));
+        Form<AreaFilter> filledForm = areaFilterForm.bindFromRequest();
+        session().put("price", filledForm.data().get("price"));
+        session().put("bedrooms", filledForm.data().get("bedrooms"));
+        return ok(areaRateSearch.render(areaFilterForm));
     }
 
-
-
-    public static Result areaTransportFiltered() {
-        Form<FilterPrice> filledForm = filterPriceForm.bindFromRequest();
-        Integer rateTransport = Integer.valueOf(filledForm.data().get("rateTransport"));
-        List<Area> areas = getAreasFromCache();
-        List<Area> areasFiltered = Area.filterByTransportRate(areas, rateTransport);
-        return ok(
-                areaShow.render(areasFiltered)
-        );
-    }
-
-    public static Result areaShow() {
-        List<Area> areas = getAreasFromCache();
-        return ok(
-                areaShow.render(areas)
-        );
-    }
-
-    private static void addAreasToCache(List<Area> areas) {
-        // Generate a unique ID
-        String uuid=session("uuid");
-        if(uuid==null) {
-            uuid=java.util.UUID.randomUUID().toString();
-            session("uuid", uuid);
+    public static Result areaRateFiltered() {
+        Form<AreaFilter> filledForm = areaFilterForm.bindFromRequest();
+        List<Area> areas = Area.all();
+        TreeMap<Integer, Area> mapArea = new TreeMap<Integer, Area>();
+        for(Area area: areas){
+            Integer endRate = calculateEndRate(area, filledForm);
+            mapArea.put(endRate, area);
         }
-        Cache.set(uuid+"areas", areas );
+        return ok(
+                areaShow.render(mapArea.descendingMap(), getTopAreas(mapArea), filledForm.data())
+        );
     }
 
-    private static List<Area> getAreasFromCache() {
-        String uuid=session("uuid");
-        return (List<Area>) Cache.get(uuid + "areas");
+    private static Integer calculateEndRate(Area area, Form<AreaFilter> filledForm) {
+        Integer rateTransport = Integer.valueOf(filledForm.data().get("rateTransport"));
+        Integer greenSpaces = Integer.valueOf(filledForm.data().get("greenSpaces"));
+        Integer nightLife = Integer.valueOf(filledForm.data().get("nightLife"));
+        Integer moneyValue = Integer.valueOf(filledForm.data().get("moneyValue"));
+        Integer price = Integer.valueOf(session().get("price"));
+        Integer bedrooms = Integer.valueOf(session().get("bedrooms"));
+        Rate rate = area.rate;
+        int rateTransportEndRate = rate.rateTransport - rateTransport;
+        int greenSpacesEndRate = rate.greenSpaces - greenSpaces;
+        int nightLifeEndRate = rate.nightLife - nightLife;
+        int moneyValueEndRate = rate.moneyValue - moneyValue;
+        int composeEndRate = rateTransportEndRate + greenSpacesEndRate + nightLifeEndRate + moneyValueEndRate;
+        WealthScale wealthScale = WealthScale.calculateWealthScale(price, Price.findByAreaAndBedrooms(area, bedrooms));
+        return composeEndRate *  wealthScale.getRateWealthScale();
     }
 
+    private static List<Area> getTopAreas(TreeMap<Integer, Area> mapArea) {
+        List<Area> topAreas = new ArrayList<Area>();
+        Iterator<Map.Entry<Integer, Area>> it = mapArea.descendingMap().entrySet().iterator();
+        int i= 0;
+        while (it.hasNext() && i < TOP_AREAS) {
+            topAreas.add(it.next().getValue());
+            i++;
+        }
+        return topAreas;
+    }
 
 }
