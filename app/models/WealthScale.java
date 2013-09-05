@@ -9,7 +9,7 @@ package models;
  */
 public enum WealthScale {
 
-    OUTOFRANGE(0), VERYLOW(1), LOW(2), AVERAGE(3), HIGH(4), VERYHIGH(5);
+    OUTOFRANGE(-1000), VERYLOW(1), LOW(2), AVERAGE(3), HIGH(4), VERYHIGH(5);
 
 
     private int rateWealthScale;

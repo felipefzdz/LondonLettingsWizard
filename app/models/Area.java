@@ -1,7 +1,6 @@
 package models;
 
-import com.avaje.ebean.QueryIterator;
-import org.omg.CORBA.PUBLIC_MEMBER;
+
 import play.data.validation.Constraints;
 import play.db.ebean.Model;
 
@@ -26,6 +25,8 @@ public class Area extends Model{
 
     @OneToOne
     public Rate rate;
+
+    public String outcode;
 
     public static Model.Finder<Long,Area> find = new Model.Finder<Long, Area>(
             Long.class, Area.class

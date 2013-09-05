@@ -8,6 +8,7 @@ create table area (
   name                      varchar(255),
   description               TEXT,
   rate_id                   bigint,
+  outcode                   varchar(255),
   constraint pk_area primary key (id))
 ;
 

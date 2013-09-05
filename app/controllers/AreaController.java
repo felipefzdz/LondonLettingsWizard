@@ -1,8 +1,6 @@
 package controllers;
 
 import models.*;
-import play.api.mvc.Session;
-import play.cache.Cache;
 import play.data.Form;
 import play.mvc.Controller;
 import play.mvc.Result;
@@ -16,7 +14,7 @@ import static play.data.Form.form;
 
 public class AreaController extends Controller {
 
-    public static final int TOP_AREAS = 2;
+    public static final int TOP_AREAS = 6;
 
     static Form<AreaFilter> areaFilterForm = form(AreaFilter.class);
 
@@ -36,13 +34,13 @@ public class AreaController extends Controller {
     public static Result areaRateFiltered() {
         Form<AreaFilter> filledForm = areaFilterForm.bindFromRequest();
         List<Area> areas = Area.all();
-        TreeMap<Integer, Area> mapArea = new TreeMap<Integer, Area>();
+        TreeMap<Integer, Area> mapArea = new TreeMap<Integer, Area>(new AreaComparator());
         for(Area area: areas){
             Integer endRate = calculateEndRate(area, filledForm);
             mapArea.put(endRate, area);
         }
         return ok(
-                areaShow.render(mapArea.descendingMap(), getTopAreas(mapArea), filledForm.data())
+                areaShow.render(mapArea, getTopAreas(mapArea), filledForm.data())
         );
     }
 
@@ -65,13 +63,22 @@ public class AreaController extends Controller {
 
     private static List<Area> getTopAreas(TreeMap<Integer, Area> mapArea) {
         List<Area> topAreas = new ArrayList<Area>();
-        Iterator<Map.Entry<Integer, Area>> it = mapArea.descendingMap().entrySet().iterator();
+        Iterator<Map.Entry<Integer, Area>> it = mapArea.entrySet().iterator();
         int i= 0;
         while (it.hasNext() && i < TOP_AREAS) {
             topAreas.add(it.next().getValue());
             i++;
         }
         return topAreas;
+    }
+
+    private static class AreaComparator implements Comparator<Integer>{
+
+        @Override
+        public int compare(Integer o1, Integer o2) {
+            int i = o2.compareTo(o1);
+            return i == 0 ? -1 : i;
+        }
     }
 
 }
