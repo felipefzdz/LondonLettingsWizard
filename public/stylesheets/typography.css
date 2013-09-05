@@ -1,0 +1,259 @@
+/*==========================================================================*/
+/* Fundaments */
+/*==========================================================================*/
+
+html {
+	font-size: 62.5%;
+}
+
+body {  /* @arch */
+    font-family: arial, helvetica, sans-serif;
+    font-size: 100%; /* prevents uneven font resizing in IE6 and 7 */
+    font-weight: normal;
+    line-height: 1.615;
+    word-wrap: break-word;
+}
+
+.site-wrapper {
+	font-size: 13px;
+	font-size: 1.3rem;
+}
+
+.main {
+	text-shadow: 0 1px 0 #fff;
+}
+
+p,
+li,
+th,
+td,
+label,
+address {
+	font-size: 13px;
+	font-size: 1.3rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+address,
+legend {
+	padding-bottom: 12px; /*Makes 16px with leading*/
+	padding-bottom: 1.2rem;
+}
+
+p:last-child {
+	padding-bottom: 0;
+}
+
+ul,
+ol,
+li {
+	padding: 6px 0;
+	padding: 0.6rem 0;
+}
+
+small {
+    font-size: 0.8em;
+}
+
+/*==========================================================================*/
+/* Primitives */
+/*==========================================================================*/
+
+h1 {
+	font-size: 24px;
+	font-size: 2.4rem;
+	line-height: 30px;
+	line-height: 3rem;
+}
+
+h2 {
+	font-size: 20px;
+	font-size: 2rem;
+	line-height: 25px;
+	line-height: 2.5rem;
+}
+
+h3 {
+	font-size: 14px;
+	font-size: 1.4rem;
+	line-height: 18px;
+	line-height: 1.8rem;
+}
+
+.secondary-content,
+.secondary-content p,
+.secondary-content li,
+.secondary-content th,
+.secondary-content td {
+	line-height: 18px;
+	line-height: 1.8rem;
+}
+
+/*==========================================================================*/
+/* Helper classes */
+/*==========================================================================*/
+
+.fs-10 {
+    font-size: 10px;
+    font-size: 1rem;
+    line-height: 14px !important;
+    line-height: 1.4rem !important;
+}
+
+.fs-11 {
+    font-size: 11px;
+    font-size: 1.1rem;
+    line-height: 16px;
+    line-height: 1.6rem;
+}
+
+.fs-12 {
+    font-size: 12px;
+    font-size: 1.2rem;
+    line-height: 18px;
+    line-height: 1.8rem;
+}
+
+.fs-13 {
+    font-size: 13px;
+    font-size: 1.3rem;
+}
+
+.fs-14 {
+    font-size: 14px;
+    font-size: 1.4rem;
+}
+
+.fs-15 {
+    font-size: 15px;
+    font-size: 1.5rem;
+}
+
+.fs-16 {
+    font-size: 16px;
+    font-size: 1.6rem;
+}
+
+.fs-18 {
+    font-size: 18px;
+    font-size: 1.8rem;
+}
+
+.fs-19 {
+    font-size: 19px;
+    font-size: 1.9rem;
+}
+
+.fs-20 {
+    font-size: 20px;
+    font-size: 2rem;
+}
+
+.fs-22 {
+    font-size: 22px;
+    font-size: 2.2rem;
+}
+
+.fs-24 {
+    font-size: 24px;
+    font-size: 2.4rem;
+}
+
+.fs-26 {
+    font-size: 26px;
+    font-size: 2.6rem;
+}
+
+.text-small {
+	font-size: 11px;
+	font-size: 1.1rem;
+	line-height: 16px;
+	line-height: 1.6rem;
+}
+
+.no-callout {
+	-webkit-touch-callout: none;
+}
+
+/*==========================================================================*/
+/* Site header */
+/*==========================================================================*/
+
+.site-toolbar li {
+	font-size: 12px;
+	font-size: 1.2rem;
+	line-height: 18px;
+	line-height: 1.8rem;
+}
+
+/*Navigation links*/
+.site-menu .primary-menu-item a {
+	font-weight: 700;
+}
+
+.site-menu .site-menu-secondary a {
+	font-size: 12px;
+	font-size: 1.2rem;
+	font-weight: normal;
+}
+
+/*==========================================================================*/
+/* Site header */
+/*==========================================================================*/
+
+.site-footer li {
+	font-size: 11px;
+	font-size: 1.1rem;
+}
+
+/*==========================================================================*/
+/* Homepage search box */
+/*==========================================================================*/
+
+.page-header-home .initial-search h1 {
+	font-size: 24px;
+	font-size: 2.4rem;
+	font-weight: normal;
+}
+
+.page-header-home .search-channel label {
+	font-size: 11px;
+	font-size: 1.1rem;
+	font-weight: 700;
+	line-height: 28px;
+	line-height: 2.8rem;
+}
+
+.page-header-home .search-location label {
+	font-size: 16px;
+	font-size: 1.6rem;
+}
+
+.page-header-home .search-location .text {
+	font-size: 15px;
+	font-size: 1.5rem;
+}
+
+.page-header-home .search-location .submit {
+	font-size: 15px;
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+
+.page-header-home .search-examples {
+	font-size: 8px;
+	font-size: 0.8rem;
+	font-weight: 700;
+}
+
+.page-header-home .search-tip {
+	font-size: 12px;
+	font-size: 1.2rem;
+}

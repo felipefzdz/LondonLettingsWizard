@@ -1,0 +1,12 @@
+/*==========================================================================*/
+/* tooltips */
+/*==========================================================================*/
+
+.tooltip {
+    border-bottom: 1px dashed #004889;
+}
+
+.tooltip:hover {
+    border-bottom-color: transparent;
+    text-decoration: none;
+}

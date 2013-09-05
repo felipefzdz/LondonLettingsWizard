@@ -1,0 +1,209 @@
+/* ==========================================================================
+
+    Print styles.
+    Inlined to avoid required HTTP connection: h5bp.com/r
+
+    !!! DO NOT CHANGE OR EDIT THIS SECTION !!!
+
+   ========================================================================== */
+
+@media screen {
+	.print-only {
+		display: none !important;
+	}
+}
+
+@media print {
+
+	/* ==========================================================================
+		Print resets (see HTML5 boilerplate)
+	   ========================================================================== */
+
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+		filter: none !important;
+		-ms-filter: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+	/* TODO: to create a generic method to act on .replace and .phark-replace*/
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+	@page {
+		margin: 8.75mm; /*on a 210mm A4 page, this equals 5% of the body width on each side*/
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+
+	.no-js-hidden {
+		display: none;
+	}
+
+	/* ==========================================================================
+		Helper classes
+	   ========================================================================== */
+
+	.print-hidden {
+		display: none !important;
+	}
+
+	.print-link:after {
+		content: " (" attr(href) ")";
+		word-wrap: break-word;
+	}
+
+	img.print-stretch {
+		width: 100%;
+	}
+
+	.print-avoid-break-inside {
+		page-break-inside: avoid;
+	}
+
+	.print-nopadding {
+		padding: 0 !important;
+	}
+
+
+	/* ==========================================================================
+		Page themes
+	   ========================================================================== */
+
+	.print-no-site-header .site-header {
+		display: none;
+	}
+
+
+	/* ==========================================================================
+		Print layout
+	   ========================================================================== */
+
+	/*  SET BASIC LIQUID LAYOUT  */
+
+	.site-wrapper {
+		width: 105%;
+		padding: 0;
+	}
+
+	.lt-ie6 .site-wrapper {
+		width: auto;
+	}
+
+	/*  RESET LAYOUT*/
+
+	/*  Display primary and secondary content in a single column */
+	.site-wrapper .primary-content,
+	.site-wrapper .secondary-content {
+		float: none;
+		width: auto;
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	/*  Reset row and cell horizontal margins */
+	.l-grid-row,
+	.l-grid-cell {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	/*  NON-SECONDARY CONTENT */
+	.l-grid-cell {
+		margin-right: 4.7619%; /*resolves to 5% absolute*/
+	}
+
+	.one-col .l-grid-cell {
+		width: auto;
+		float: none;
+	}
+
+	.two-col .l-grid-cell {
+		width: 45.238%; /*resolves to 47.5% absolute */
+	}
+
+	.three-col .l-grid-cell {
+		width: 28.572%; /*resolves to 30% absolute */
+	}
+
+	/*  SECONDARY CONTENT */
+
+	/*  Lay out secondary-content rows side by side */
+
+	.site-wrapper .secondary-content {
+		/*width: 105%;*/ /*assume 5vw gutter*/  /*spike*/
+	}
+
+	.site-wrapper .secondary-content .l-grid-row {
+		display: inline-block;
+		vertical-align: top;
+		width: 50%; /*52.5vw*/
+	}
+
+	.lt-ie8 .site-wrapper .secondary-content .l-grid-row {
+		display: inline;
+		width: 49.99%;
+	}
+
+	/*  Set default cell margin*/
+	.site-wrapper .secondary-content .l-grid-row .l-grid-cell {
+		margin-right: 9.523%; /*resolves to 5% absolute due to 50% row*/
+	}
+
+	/*  Single secondary cell */
+	.site-wrapper .secondary-content .one-col .l-grid-cell {
+		float: none;
+		width: auto;
+	}
+
+	/*  Double secondary cell */
+	.site-wrapper .secondary-content .two-col .l-grid-cell {
+		width: 40.477%; /*resolves to 21.25% absolute - quarter unit*/
+	}
+}

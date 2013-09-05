@@ -1,0 +1,374 @@
+/* ==========================================================================
+
+	Icons
+
+	!!! DO NOT CHANGE OR EDIT THIS SECTION FOR INDIVIDUAL ELEMENTS OR PAGES !!!
+	!!! ALL ELEMENTS ARE GENERICALLY USED ACROSS THE SITE!!!
+
+	==========================================================================
+
+	- base styles
+	- button styling
+
+   ========================================================================== */
+
+
+
+/* ==========================================================================
+	base styles: resets
+	========================================================================== */
+
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+	resize: vertical;
+}
+
+
+
+/* ==========================================================================
+	button / CTA (call-to-action) styling
+	========================================================================== */
+
+.btn {
+	background-color: #196fb6;
+	background-image: url(/ps/images/fullsite/common/btn-background.png);
+	background-repeat: repeat-x;
+	background-position: 0 0;
+	border: 1px solid #003f72;
+	border-bottom-color: #003159;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 3px;
+	color: #ffffff;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 16px;
+	font-size: 1.6rem;
+	font-weight: bold;
+	margin-bottom: 0;
+	padding: 4px 48px;
+	line-height: 20px;
+	text-align: center;
+	text-shadow: 0 -1px 0 #002241;
+	vertical-align: middle;
+}
+
+.lt-ie7 input.btn {
+	display: inline;
+	font-family: ariel, helvetica, san-serif;
+	font-size: 13px;
+	padding: 0;
+}
+
+.btn-skinny {
+	padding: 4px 20px;
+}
+
+.lt-ie8 .btn-skinny {
+	padding: 4px 12px;
+}
+
+.btn-small {
+	font-size: 13px;
+	font-size: 1.3rem;
+	line-height: 18px;
+	padding: 4px 12px;
+}
+
+.lt-ie8 .btn {
+	display: inline;
+	zoom: 1;
+}
+
+.lt-ie7 a.btn {
+	color: #ffffff;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active,
+.btn.active,
+.btn:visited,
+.btn.disabled,
+.btn[disabled] {
+	background-position: 0 -300px;
+	border-bottom-color: #003f72;
+	color: #fff;
+	text-decoration: none;
+}
+
+.lt-ie7 a.btn:hover {
+	text-decoration: none;
+}
+
+.btn:focus {
+	outline: thin dotted #333;
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: -2px;
+}
+
+.btn.active,
+.btn:active {
+	background-position: 0 -600px;
+	border-bottom-color: #003f72;
+    -webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
+    -moz-box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
+    box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
+	outline: 0;
+}
+
+.btn.disabled,
+.btn[disabled] {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	cursor: default;
+    filter: alpha(opacity=65);
+	opacity: 0.65;
+}
+
+.btn-block {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	display: block;
+	padding-left: 0;
+	padding-right: 0;
+	width: 100%;
+}
+
+.lt-ie7 .btn-block {
+	width: 90%;
+}
+
+.btn-block + .btn-block {
+	margin-top: 5px;
+}
+
+input[type="submit"].btn-block,
+input[type="reset"].btn-block,
+input[type="button"].btn-block {
+	width: 100%;
+}
+
+.btn-primary {
+	background-color: #ff7200;
+	background-position: 0 -1800px;
+	border-color: #f26c00;
+	border-bottom-color: #a14d12;
+	color: #ffffff;
+	text-shadow: 0 -1px 0 #d45f00;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:visited,
+.btn-primary.disabled,
+.btn-primary[disabled] {
+	background-position: 0 -2100px;
+	border-bottom-color: #b95a14;
+	color: #ffffff;
+}
+
+.btn-primary:active,
+.btn-primary.active {
+	background-position: 0 -2400px;
+	border-bottom-color: #b95a14;
+	color: #ffffff;
+}
+
+.btn-inverse {
+	background-color: #f5f5f5;
+	background-position: 0 -900px;
+	border: 1px solid #ccc;
+	border-bottom-color: #b0b0b0;
+	color: #333333;
+	text-shadow: 0 1px 1px #fff;
+}
+
+.btn-inverse:hover,
+.btn-inverse:focus,
+.btn-inverse:visited,
+.btn-inverse.disabled,
+.btn-inverse[disabled] {
+	background-position: 0 -1200px;
+	border-bottom-color: #ccc;
+	color: #555;
+}
+
+.btn-inverse:active,
+.btn-inverse.active {
+	background-position: 0 -1500px;
+	border-bottom-color: #e4e4e4;
+	box-shadow: 0 1px 1px white;
+	-webkit-box-shadow: 0 1px 1px white;
+	color: #555;
+	/* TODO:  Ask design to find an active state that remains within the button box, or create workaround for coloured / image backgrounds */
+}
+
+.lt-ie8 button.btn,
+.lt-ie8 input[type="submit"].btn {
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+button.btn::-moz-focus-inner,
+input[type="submit"].btn::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+
+/*
+ * overseas theme overrides
+ * TODO: strip out into separate theme css files
+ */
+
+.overseas .btn {
+    background: #00980d url(/ps/images/buttons/osButtonBg.jpg) repeat-x bottom;
+    background: -webkit-gradient(linear,left top,left bottom,from(#00980d),to(#006e1f));
+    background: -moz-linear-gradient(100% 100% 90deg,#006e1f,#00980d);
+    border-color: #006e1f;
+    color: #fff;
+    text-shadow:0 -1px 1px #014a16;
+}
+
+.overseas .btn:hover {
+    background: #01840c url(/ps/images/buttons/osButtonBgHover.jpg) repeat-x bottom;
+    background: -webkit-gradient(linear,left top,left bottom,from(#01840c),to(#01581a));
+    background: -moz-linear-gradient(100% 100% 90deg,#01581a,#01840c);
+    border-color: #01581a;
+}
+
+.overseas .btn:active {
+	border-color: #014a16;
+	background: #006e1f;
+}
+
+.overseas .btn-primary {
+    background: #9e1616;
+	background: -moz-linear-gradient(top, #e01d1d, #9e1616);
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#e01d1d), to(#9e1616));
+	background: -webkit-linear-gradient(top, #e01d1d, #9e1616);
+	background: -o-linear-gradient(top, #e01d1d, #9e1616);
+	background: linear-gradient(to bottom, #e01d1d, #9e1616);
+    border-color: #7d1111;text-shadow:0 -1px 1px #7d1111;
+}
+
+.overseas .btn-primary:hover {
+    background: #8f1414;
+	background-image: -moz-linear-gradient(top, #d11b1b, #8f1414);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#d11b1b), to(#8f1414));
+	background-image: -webkit-linear-gradient(top, #d11b1b, #8f1414);
+	background-image: -o-linear-gradient(top, #d11b1b, #8f1414);
+	background-image: linear-gradient(to bottom, #d11b1b, #8f1414);
+	border-color: #8f1414;
+}
+
+.overseas .btn-primary:active {
+	background: #8f1414;
+	border-color: #7d1111;
+}
+
+.overseas .btn-inverse {
+	background-color: #f5f5f5;
+	background-image: url(/ps/images/fullsite/common/btn-background.png);
+	background-repeat: repeat-x;
+	background-position: 0 -900px;
+	border: 1px solid #ccc;
+	border-bottom-color: #b0b0b0;
+	color: #333333;
+	text-shadow: 0 1px 1px #fff;
+}
+
+.overseas .btn-inverse:hover,
+.overseas .btn-inverse:focus,
+.overseas .btn-inverse:visited,
+.overseas .btn-inverse.disabled,
+.overseas .btn-inverse[disabled] {
+	background-color: #f5f5f5;
+	background-image: url(/ps/images/fullsite/common/btn-background.png);
+	background-position: 0 -1200px;
+	border: 1px solid #ccc;
+	color: #555;
+}
+
+.overseas .btn-inverse:active,
+.overseas .btn-inverse.active {
+	background-image: url(/ps/images/fullsite/common/btn-background.png);
+	background-position: 0 -1500px;
+	border-color: #ccc;
+	box-shadow: 0 1px 1px white;
+	-webkit-box-shadow: 0 1px 1px white;
+	color: #555;
+	/* TODO:  Ask design to find an active state that remains within the button box, or create workaround for coloured / image backgrounds */
+}
+
+
+
+
+
+/*
+ * students theme overrides
+ * TODO: strip out into separate theme css files
+ */
+
+.students .btn {
+	background-color: #851a4e;
+	background-image: none;
+	background-image: -moz-linear-gradient(top, #9d1364, #851a4e);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#9d1364), to(#851a4e));
+	background-image: -webkit-linear-gradient(top, #9d1364, #851a4e);
+	background-image: -o-linear-gradient(top, #9d1364, #851a4e);
+	background-image: linear-gradient(to bottom, #9d1364, #851a4e);
+	background-repeat: repeat-x;
+	border-color: #7f0f51;
+	color: #ffffff;
+	text-shadow: 0 -1px 1px #551132;
+}
+
+.students .btn:hover,
+.students .btn:focus,
+.students .btn:active,
+.students .btn.active,
+.students .btn:visited,
+.students .btn.disabled,
+.students .btn[disabled] {
+	background-color: #851a4e;
+	color: #ffffff;
+}
+
+.students .btn-primary {
+	background-color: #851a4e;
+	background-image: none;
+	background-image: -moz-linear-gradient(top, #9d1364, #851a4e);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#9d1364), to(#851a4e));
+	background-image: -webkit-linear-gradient(top, #9d1364, #851a4e);
+	background-image: -o-linear-gradient(top, #9d1364, #851a4e);
+	background-image: linear-gradient(to bottom, #9d1364, #851a4e);
+	background-repeat: repeat-x;
+	border-color: #7f0f51;
+	color: #ffffff;
+	text-shadow: 0 -1px 1px #551132;
+}
+
+.students .btn-primary:hover,
+.students .btn-primary:focus,
+.students .btn-primary:active,
+.students .btn-primary.active,
+.students .btn-primary:visited,
+.students .btn-primary.disabled,
+.students .btn-primary[disabled] {
+	background-color: #851a4e;
+	color: #ffffff;
+}

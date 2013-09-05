@@ -1,0 +1,459 @@
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+/* TODO: pick the best of the below methods for hiding  */
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	width: auto;
+}
+
+@media screen {
+	.js .js-hidden {
+		display: none;
+	}
+}
+
+.no-js .no-js-hidden {
+	display: none;
+}
+
+.hide {
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+}
+
+.invisible {
+	visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+	content: " "; /* 1 */
+	display: table; /* 2 */
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.lt-ie8 .clearfix {
+	clear: both;
+	zoom: 1;
+}
+
+/* Generic Levin image replacement -
+   http://levin.grundeis.net/files/20030809/alternatefir.html */
+.replace {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	display: block;
+}
+
+.replace span {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1; /*for Opera 5 and 6*/
+}
+
+/* Image replacement for smaller/transparent images  */
+.phark-replace {
+	display: block;
+	overflow: hidden;
+	text-indent: -9999em;
+}
+
+/* Some generic styles */
+.relative {
+	position: relative !important;
+}
+
+.fixed {
+	position: fixed !important;
+}
+
+.right {
+	float: right !important;
+}
+
+.left {
+	float: left !important;
+}
+
+.block {
+	display: block !important;
+}
+
+.inline {
+	display: inline !important;
+}
+
+.inline-block {
+	display: inline-block !important;
+}
+
+.bold {
+	font-weight: bold !important;
+}
+
+.no-bold {
+	font-weight: normal !important;
+}
+
+.no-bg {
+	background: none !important;
+}
+
+.no-border {
+	border: none !important;
+}
+
+.clear-both {
+	clear: both !important;
+}
+
+.clear-left {
+	clear: left !important;
+}
+
+.clear-right {
+	clear: right !important;
+}
+
+.no-margin {
+	margin: 0 !important;
+}
+
+.margin-bottom-0 {
+    margin-bottom: 0 !important;
+}
+
+.align-center {
+	text-align: center !important;
+}
+
+.align-left {
+	text-align: left !important;
+}
+
+.align-right {
+	text-align: right !important;
+}
+
+.overflow-hidden {
+	overflow: hidden !important;
+}
+
+.invisible {
+	visibility: hidden !important;
+}
+
+.no-box-shadow {
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+}
+
+.no-padding {
+	padding: 0 !important;
+}
+
+.padding-16 {
+	padding: 16px !important;
+	padding: 1.6rem 16px !important;
+}
+
+.border.padding-16 {
+    padding: 16px 15px !important;
+}
+
+.padding-12 {
+	padding: 12px !important;
+	padding: 1.2rem 12px !important;
+}
+
+.padding-8 {
+	padding: 8px !important;
+	padding: .8rem 8px !important;
+}
+
+.padding-8-16 {
+	padding-top: 8px !important;
+	padding-bottom: 8px !important;
+	padding-top: .8rem 8px !important;
+	padding-bottom: .8rem 8px !important;
+    padding-right: 16px;
+    padding-left: 16px;
+}
+
+.padding-top {
+	padding-top: 16px !important;
+	padding-top: 1.6rem !important;
+}
+
+.padding-right {
+	padding-right: 16px !important;
+}
+
+.padding-bottom {
+	padding-bottom: 16px !important;
+	padding-bottom: 1.6rem !important;
+}
+
+.padding-left {
+	padding-left: 16px !important;
+}
+
+.padding-tb {
+	padding: 16px 0 !important;
+}
+
+.padding-lr {
+	padding: 0 16px !important;
+}
+
+.padding-rb {
+	padding: 0 16px 16px 0 !important;
+}
+
+.border.padding-lr {
+	padding: 0 15px !important;
+}
+
+.padding-bottom-0 {
+	padding-bottom: 0 !important;
+}
+
+.no-td:hover {
+    text-decoration: none;
+}
+
+
+
+
+
+
+/* ==========================================================================
+	helper layout classes for table column width:
+   ========================================================================== */
+
+.width-100 {
+	width: 100%;
+}
+
+.width-50 {
+	width: 50%;
+}
+
+/* ==========================================================================
+	helper layout classes for width:    1 unit = 16px
+   ========================================================================== */
+
+.span5 {
+	width: 80px;
+}
+
+.span6 {
+	width: 96px;
+}
+
+.span7 {
+	width: 112px;
+}
+
+.span8 {
+	width: 128px;
+}
+
+.span9 {
+	width: 144px;
+}
+
+.span10 {
+	width: 160px;
+}
+
+.span11 {
+	width: 176px;
+}
+
+.span12 {
+	width: 192px;
+}
+
+.span13 {
+	width: 208px;
+}
+
+.span14 {
+	width: 224px;
+}
+
+.span15 {
+	width: 240px;
+}
+
+.span16 {
+	width: 256px;
+}
+
+.span17 {
+	width: 272px;
+}
+
+.span18 {
+	width: 288px;
+}
+
+.span19 {
+	width: 304px;
+}
+
+.span20 {
+	width: 320px;
+}
+
+.span21 {
+	width: 336px;
+}
+
+.span22 {
+	width: 352px;
+}
+
+.span23 {
+	width: 368px;
+}
+
+.span24 {
+	width: 384px;
+}
+
+.span25 {
+	width: 400px;
+}
+
+.span26 {
+	width: 416px;
+}
+
+.span27 {
+	width: 432px;
+}
+
+.span28 {
+	width: 448px;
+}
+
+.span29 {
+	width: 464px;
+}
+
+.span30 {
+	width: 480px;
+}
+
+.span31 {
+	width: 496px;
+}
+
+.span32 {
+	width: 512px;
+}
+
+.span33 {
+	width: 528px;
+}
+
+.span34 {
+	width: 544px;
+}
+
+.span35 {
+	width: 560px;
+}
+
+.span36 {
+	width: 576px;
+}
+
+.span37 {
+	width: 592px;
+}
+
+.span38 {
+	width: 608px;
+}
+
+.span39 {
+	width: 624px;
+}
+
+.span40 {
+	width: 640px;
+}
+
+.span41 {
+	width: 656px;
+}
+
+.span42 {
+	width: 672px;
+}
+
+.span43 {
+	width: 688px;
+}
+
+.span44 {
+	width: 704px;
+}
+
+.span61 {
+	width: 976px;
+}
