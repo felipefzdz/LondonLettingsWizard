@@ -25,6 +25,7 @@ div.wrapper {
 	padding: 24px;
 	width: 768px;
 	margin: 200px auto auto auto;
+	padding-bottom: 32px;
 }
 
 .wrapper-large {
@@ -35,7 +36,7 @@ div.wrapper {
 h2 {
 	font-weight: bold;
 	font-size: 2.4rem;
-	margin-bottom: 1rem;
+	margin-bottom: 24px;
 }
 
 h2:after {
@@ -52,26 +53,54 @@ h2:after {
 
 /*Forms*/
 
+form {
+	font-size: 1.6rem;
+}
+
 dt, dd {
 	display: inline-block;
 }
 
 dd {
-	width: 80px;
+	width: 128px;
+}
+
+dl.largeform dd {
+	width: 196px;
 }
 
 dd input {
 	width: 100%;
+	padding: 6px;
+	vertical-align: middle;
+	border: 1px solid #dddddd;
+}
+
+dd input:focus {
+	outline: none;
 }
 
 dt {
 	font-weight: bold;
+	margin-right: 16px;
+	width: 128px;
+}
+
+dl.largeform dt {
 	width: 240px;
 }
 
 .di {
+	display: inline-block;
+	margin-right: 41px /*add 9px for padding/box stuff on input to left*/
+}
+
+dl.largeform .di {
 	display: block;
-	margin-bottom: 16px;
+}
+
+.di + .di {
+	margin-top: 16px;
 }
 
 .btn, input[type="submit"] {
@@ -91,7 +120,7 @@ dt {
 	font-size: 1.6rem;
 	font-weight: bold;
 	margin-bottom: 0;
-	padding: 3px 32px;
+	padding: 5px 32px;
 	line-height: 20px;
 	text-align: center;
 	text-shadow: 0 -1px 0 #002241;

@@ -7,12 +7,28 @@
 	<h2>Where should I live in London? <span class="title-specific">My preferences</span></h2>
 	
 	@form(routes.AreaController.areaRateFiltered()) {
+		
+		<dl>
+			<span class="di">	
+				<dt>Commute times</dt>
+				<dd><input type="text" name="rateTransport"/></dd>
+			</span>
+			<span class="di">
+				<dt>Green spaces</dt>
+				<dd><input type="text" name="greenSpaces"/></dd>				
+			</span>
+			<span class="di">
+				<dt>Nightlife</dt>
+				<dd><input type="text" name="nightLife"/></dd>				
+			</span>
+			<span class="di">
+				<dt>Value for money</dt>
+				<dd><input type="text" name="moneyValue"/></dd>				
+			</span>
+		</dl>
 	
-	    @inputText(areaFilterForm("rateTransport"))
-	    @inputText(areaFilterForm("greenSpaces"))
-	    @inputText(areaFilterForm("nightLife"))
-	    @inputText(areaFilterForm("moneyValue"))
-	    <input type="submit" value="Search">	
+	    
+	    <input type="submit" class="right" value="Get results">
 	}
 
 </div>
