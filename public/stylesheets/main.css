@@ -1,3 +1,9 @@
+/*helpers*/
+.right {
+	float: right;
+}
+
+
 html {
 	font-size: 10px;
 	font-family: Arial, sans-serif;
@@ -16,7 +22,7 @@ body {
 div.wrapper {
 	border: 1px solid #cccccc;
 	background: #f7f7f7;
-	padding: 16px;
+	padding: 24px;
 	width: 768px;
 	margin: 200px auto auto auto;
 }
@@ -25,17 +31,50 @@ div.wrapper {
 	width: 1024px;
 }
 
-h1 {
+/*typography*/
+h2 {
 	font-weight: bold;
-	font-size: 1.8rem;
+	font-size: 2.4rem;
+	margin-bottom: 1rem;
+}
+
+h2:after {
+	display: block;
+	content: "";
+	margin-top: 0.3rem;
+	border-top: 1px solid #cccccc;
+	border-bottom: 1px solid #ffffff;
 }
 
 .title-specific {
 	color: #004889;
 }
 
+/*Forms*/
 
-input[type="submit"] {
+dt, dd {
+	display: inline-block;
+}
+
+dd {
+	width: 80px;
+}
+
+dd input {
+	width: 100%;
+}
+
+dt {
+	font-weight: bold;
+	width: 240px;
+}
+
+.di {
+	display: block;
+	margin-bottom: 16px;
+}
+
+.btn, input[type="submit"] {
 	background-color: #196fb6;
 	background-image: url(../images/btn-background.png);
 	background-repeat: repeat-x;
@@ -52,9 +91,10 @@ input[type="submit"] {
 	font-size: 1.6rem;
 	font-weight: bold;
 	margin-bottom: 0;
-	padding: 4px 48px;
+	padding: 3px 32px;
 	line-height: 20px;
 	text-align: center;
 	text-shadow: 0 -1px 0 #002241;
 	vertical-align: middle;
 }
+
