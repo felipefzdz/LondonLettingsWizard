@@ -155,22 +155,40 @@ MAP = (function(){
 		}		
 	}
 	
+	function mapScoreToColor(score) {
+		var color;
+		
+		if (score == 0) {
+			color = '#cccccc';
+		}
+		else if (score < 10) {
+			color = '#00478e';
+		}
+		else if (score < 20) {
+			color = '#0e836a';
+		}
+		else if (score < 30) {
+			color = '#47ba78';
+		}
+		else if (score < 40) {
+			color = '#7cc242';
+		}		
+		else {
+			color = '#d7a300';
+		}
+
+		return color;
+	}
+	
+	
 	function PUBLIC_applyScores(postcodeScoreJSON) {
 		//Take JSON of outcode and scores to apply
-		
-		var scoreToStyleMap = {
-			"0" : "#cccccc",
-			"1" : "#00478e",
-			"2" : "#0e836a",
-			"3" : "#47ba78",
-			"4" : "#7cc242",
-			"5" : "#d7a300"
-		};
-		
+				
 		for (postcode in postcodeScoreJSON) {
+			postcode = postcode.toLowerCase();
 			
 			var shapeToManipulate = outcodes[postcode].representation;
-			var thisFill = scoreToStyleMap[postcodeScoreJSON[postcode]];
+			var thisFill = mapScoreToColor(postcodeScoreJSON[postcode]);
 			
 			styleToApply = thisFill;
 			

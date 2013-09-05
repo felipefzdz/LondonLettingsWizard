@@ -12,11 +12,10 @@
 	
 	<ul id="outcode-results">
 	    @for(area <- areas) {
-	    <li>
-	        @area._2.name
-	        @area._1
+	    <li class="outcode-scores">
+	        <span class="outcode-id">@area._2.name</span>
+	        <span class="score">@area._1</span>
 	    </li>
-	    </br>
 	    }
 	
 	    Based on these requirements:
@@ -24,25 +23,22 @@
 	    <li>
 	        rateTransport:  @filterData.get("rateTransport")
 	    </li>
-	    </br>
 	
 	    <li>
 	        greenSpaces:  @filterData.get("greenSpaces")
 	    </li>
-	    </br>
 	
 	    <li>
 	        nightLife:  @filterData.get("nightLife")
 	    </li>
-	    </br>
 	
 	    <li>
 	        moneyValue:  @filterData.get("moneyValue")
 	    </li>
-	    </br>
+	</ul>
 	
-	    </br>
 	    We recommend these areas to you
+	<ul id="recommendation">
 	    @for(topArea <- topAreas) {
 	    <li class="outcode-result">
 	       <span class="outcode-name">@topArea.name</span>
