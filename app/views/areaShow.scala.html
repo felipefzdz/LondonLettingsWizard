@@ -1,19 +1,50 @@
-@(areas: List[Area])
+@(areas:  NavigableMap[Integer, Area], topAreas: List[Area], filterData: Map[String, String])
+@import java.util
 
 @main("London Lettings Wizard") {
 
 <h1>@areas.size() area(s)</h1>
+</br>
 
 <ul>
     @for(area <- areas) {
     <li>
-        @area.name
-        @area.wealthScale.toString
+        @area._2.name
+        @area._1
     </li>
-    <li>
-        @area.description
-    </li>
+    </br>
+    }
 
+    Based on these requirements:
+
+    <li>
+        rateTransport:  @filterData.get("rateTransport")
+    </li>
+    </br>
+
+    <li>
+        greenSpaces:  @filterData.get("greenSpaces")
+    </li>
+    </br>
+
+    <li>
+        nightLife:  @filterData.get("nightLife")
+    </li>
+    </br>
+
+    <li>
+        moneyValue:  @filterData.get("moneyValue")
+    </li>
+    </br>
+
+    </br>
+    We recommend these areas to you
+    @for(topArea <- topAreas) {
+    <li>
+       @topArea.name
+       @topArea.description
+    </li>
+    </br>
     }
 </ul>
 

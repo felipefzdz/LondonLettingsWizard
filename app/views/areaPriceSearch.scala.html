@@ -1,4 +1,4 @@
-@(priceForm: Form[FilterPrice])
+@(areaFilterForm: Form[AreaFilter])
 @import helper._
 
 @main("London Lettings Wizard") {
@@ -7,8 +7,8 @@
 
 @form(routes.AreaController.areaPriceFiltered()) {
 
-    @inputText(priceForm("bedrooms"))
-    @inputText(priceForm("price"))
+    @inputText(areaFilterForm("bedrooms"))
+    @inputText(areaFilterForm("price"))
 
     <input type="submit" value="Search">
 

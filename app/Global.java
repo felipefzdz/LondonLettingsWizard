@@ -18,6 +18,7 @@ public class Global extends GlobalSettings {
         public static void insert(Application app) {
             if(Ebean.find(Area.class).findRowCount() == 0) {
                 Map<String,List<Object>> all = (Map<String,List<Object>>)Yaml.load("initial-data.yml");
+                Ebean.save(all.get("rates"));
                 Ebean.save(all.get("areas"));
                 Ebean.save(all.get("prices"));
             }
