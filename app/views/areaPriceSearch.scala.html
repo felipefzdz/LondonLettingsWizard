@@ -3,15 +3,17 @@
 
 @main("London Lettings Wizard") {
 
-<h2>Search Areas By Price</h2>
-
-@form(routes.AreaController.areaPriceFiltered()) {
-
-    @inputText(areaFilterForm("bedrooms"))
-    @inputText(areaFilterForm("price"))
-
-    <input type="submit" value="Search">
-
-}
+<div class="wrapper">
+	<h2>Where should I live in London? <span class="title-specific">My basic requirements</span></h2>
+	
+	@form(routes.AreaController.areaPriceFiltered()) {
+	
+	    @inputText(areaFilterForm("bedrooms"))
+	    @inputText(areaFilterForm("price"))
+	
+	    <input type="submit" value="Search">
+	
+	}
+</div>
 }
 

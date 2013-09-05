@@ -5,7 +5,8 @@ html {
 
 body {
 	font-size: 1.4rem;
-	background-color: #fbfbfb;
+	background-color: #f0f0f0;
+	background: linear-gradient(to bottom, #f8f8f8 0%,#f0f0f0 100%);
 	background-image: url(../images/bkg.png);
 	background-repeat: no-repeat;
 	background-position-x: center;
@@ -20,9 +21,17 @@ div.wrapper {
 	margin: 200px auto auto auto;
 }
 
+.wrapper-large {
+	width: 1024px;
+}
+
 h1 {
 	font-weight: bold;
 	font-size: 1.8rem;
+}
+
+.title-specific {
+	color: #004889;
 }
 
 

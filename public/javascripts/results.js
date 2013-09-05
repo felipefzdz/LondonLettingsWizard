@@ -1,3 +1,4 @@
 //Demo
+var paper = document.getElementById('paper');
 
-window.alert("These are TEH RESULTS");
+MAP.drawMap(paper);

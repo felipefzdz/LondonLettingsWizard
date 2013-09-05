@@ -125,25 +125,27 @@ MAP = (function(){
 		"e13" : " M 661.57 383.32 C 671.02 383.09 680.41 381.54 689.88 381.96 C 689.73 384.25 689.48 386.56 689.63 388.87 C 689.88 393.23 693.34 396.68 693.33 401.09 C 693.58 406.62 690.44 412.18 692.58 417.61 C 694.71 423.18 697.40 428.52 699.47 434.13 C 696.88 434.71 693.96 434.93 691.95 436.85 C 689.52 438.67 687.37 441.70 683.96 441.24 C 678.94 440.81 673.97 441.65 668.97 441.84 C 665.06 441.71 666.00 437.32 665.32 434.66 C 664.15 432.68 661.69 433.27 660.09 434.31 C 657.02 435.85 653.75 439.12 650.13 436.99 C 646.36 431.86 655.87 427.44 653.07 422.02 C 651.12 419.15 647.14 419.32 644.10 418.73 C 644.97 414.18 644.91 409.31 647.04 405.11 C 648.56 402.11 652.15 401.97 655.05 401.46 C 654.36 398.61 653.32 395.86 652.72 392.99 C 653.07 390.56 655.93 390.00 657.57 388.61 C 659.65 387.53 660.57 385.29 661.57 383.32 Z"
 		};
 		
-	function shapeApplyStyle(raphaelShapeObject, customStyle) {
+	function shapeApplyStyle(raphaelShapeObject, customFill) {
 		//Apply style to a shape path. Apply default style if none specified.
 		
-		var defaultStyle = {
-			fill : "#004889",
-			"stroke-width" : "0"
-		};
+		var strokeWidth = 0;		
+		var fill = "#004889";
 		
-		var fill = customStyle.fill || defaultStyle.fill;
-		var strokeWidth = customStyle['stroke-width'] || defaultStyle['stroke-width'];
+		if (customFill) {
+			fill = customFill;
+		}
 		
 		raphaelShapeObject.attr({fill : fill, "stroke-width" : strokeWidth});
 	}
 	
 	
 	function PUBLIC_drawMap(canvas) {
-		var mapCanvas = new Raphael(canvas);
+		
+		var mapCanvas = new Raphael(canvas, "100%", "100%");
 		//Draw all London map shapes, assign to outcodes as representations
 		for (path in londonMapPaths) {
+			
+			outcodes[path] = new Object;			
 			outcodes[path].representation = mapCanvas.path(londonMapPaths[path]);
 			shapeApplyStyle(outcodes[path].representation); 
 		}		
