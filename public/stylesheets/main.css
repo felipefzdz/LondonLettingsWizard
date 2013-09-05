@@ -1,0 +1,24 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 10px;
+	font-family: Arial, sans-serif;
+}
+
+body {
+	font-size: 1.4rem;
+}
+
+div.wrapper {
+	border: 1px solid #cccccc;
+	background: #f7f7f7;
+	padding: 16px;
+}
+
+h1 {
+	font-weight: bold;
+	font-size: 1.8rem;
+}
