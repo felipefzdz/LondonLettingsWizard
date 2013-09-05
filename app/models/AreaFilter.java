@@ -27,6 +27,7 @@ public class AreaFilter {
         this.moneyValue = moneyValue;
     }
 
+
     public void setPrice(int price) {
         this.price = price;
     }

@@ -14,11 +14,6 @@ public class RateTest extends BaseTest {
         assertEquals(new Integer(-999), Rate.calculateEndRate(Area.find.byId(1L), areaFilter));
     }
 
-    @Test
-    public void testVeryHighRate(){
-        insertInitialData();
-        AreaFilter areaFilter = new AreaFilter(3100, 1, 1, 1, 1, 1);
-        assertEquals(new Integer(-999), Rate.calculateEndRate(Area.find.byId(1L), areaFilter));
-    }
+
 
 }

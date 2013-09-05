@@ -65,8 +65,9 @@ public class Area extends Model{
         Iterator<Map.Entry<Integer, Area>> it = mapArea.entrySet().iterator();
         int i= 0;
         while (it.hasNext() && i < TOP_AREAS) {
-            if (it.next().getKey() >= TOP_AREA_THRESHOLD){
-                topAreas.add(it.next().getValue());
+            Map.Entry<Integer, Area> entry = it.next();
+            if (entry.getKey() >= TOP_AREA_THRESHOLD){
+                topAreas.add(entry.getValue());
                 i++;
             }
         }
