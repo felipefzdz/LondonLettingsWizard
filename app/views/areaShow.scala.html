@@ -7,9 +7,6 @@
 	
 	<h2>Where should I live in London? <span class="title-specific">Your results</span></h2>
 	@*<h2>@areas.size() area(s)</h2>*@
-	</br>
-	
-	
 	
 	<div id="legend">
 		<div class="box g6"></div><p>Great!</p>
@@ -18,12 +15,7 @@
 		<div class="box g3"></div><p>Meh</p>	
 		<div class="box g2"></div><p>Rubbish!</p>
 		<div class="box g1"></div><p>Too expensive</p>	
-		
 	</div>
-	
-	
-	
-	
 	
 	<ul id="outcode-results">
 	    @for(area <- areas) {
@@ -79,61 +71,48 @@
 			<p>The area made up of this big loop in the Thames was once a thriving community of dock workers, centred around the West India Docks, 
 			East India Docks and, later, Millwall Dock. Mass decline in the 70s left the Isle of Dogs impoverished and there is still a wide 
 			chasm today between the housing needs of traditional East Enders and the new wave of professionals lured by the building of shiny 
-			office blocks in Canary Wharf.</p>
-			<p>This purpose-built business district is home to the UK's second tallest building One Canada Square 
-			(recently over-taken by the Shard in London Bridge) and the cluster of towering structures is an impressive sight from many high 
-			viewpoints around London (especially Greenwich Park).</p>
+			office blocks in Canary Wharf. <span class="author">- Claire Smith</span></p>
 		</div>
 
 		
 		<div id="streetview" class="segment">
 			<h4>Street views in this area:</h4>
 			<div id="streetview-gallery">
-				<img></img>
-				<img></img>
-				<img></img>
-				<img></img>
+				<img src="@routes.Assets.at("images/sv1.jpg")" />
+				<img src="@routes.Assets.at("images/sv2.jpg")" />
+				<img src="@routes.Assets.at("images/sv3.jpg")" />
 			</div>			
 		</div>
 		
-		<dl class"amenities-panel segment">
-			<dt><img /></dt>
-			<dd>Travel</dd>
+		<dl class="amenities-panel segment">
+			<h4>Amenities</h4>
+			<dt>Commute</dt>
+			<dd style="color: #7cc242">13 mins</dd>
 			
-			<dt><img /></dt>
-			<dd>Travel</dd>
+			<dt>Nightlife</dt>
+			<dd style="color: #0e836a">7 / 10</dd>
 			
-			<dt><img /></dt>
-			<dd>Travel</dd>
+			<dt>Greenery</dt>
+			<dd style="color: #666666">3 / 10</dd>
 			
-			<dt><img /></dt>
-			<dd>Travel</dd>			
+			<dt>Value</dt>
+			<dd style="color: #00478e"> 6 / 10</dd>			
 		</dl>
+			
 		
-		<ul class="properties-panel">
+		<ul class="properties-panel segment">
+			<h4>Local properties</h4>
 			<li>
-				<img class="property-photo" />
-				<span class="prop-title">Bartlett Park</span>
-				<span class="prop-price">£1950pcm</span>
-				<span class="prop-desc">3 bedroom apartment</span>
+				<img class="property-photo" src="@routes.Assets.at("images/prop1.jpg")"/>
+				<span class="desc">Bartlett Park</span>
 			</li>
 			<li>
-				<img class="property-photo" />
-				<span class="prop-title">Marsh Wall</span>
-				<span class="prop-price">£2500pcm</span>
-				<span class="prop-desc">3 bedroom apartment</span>
+				<img class="property-photo" src="@routes.Assets.at("images/prop2.jpg")"/>
+				<span class="desc">Bartlett Park</span>				
 			</li>
 			<li>
-				<img class="property-photo" />
-				<span class="prop-title">Westferry Rd</span>
-				<span class="prop-price">£2850pcm</span>
-				<span class="prop-desc">3 bedroom detached house</span>
-			</li>
-			<li>
-				<img class="property-photo" />
-				<span class="prop-title">Elndra Dock Rd</span>
-				<span class="prop-price">£3250pcm</span>
-				<span class="prop-desc">4 bedroom maisonette</span>
+				<img class="property-photo" src="@routes.Assets.at("images/prop3.jpg")"/>
+				<span class="desc">Bartlett Park</span>				
 			</li>
 		</ul>
 		

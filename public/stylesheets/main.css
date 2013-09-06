@@ -192,6 +192,7 @@ dl.largeform .di {
 	width: 696px;
 	height: 596px;
 	float: left;
+	margin-top: 40px;
 }
 
 #postcode-identifier {
@@ -223,6 +224,7 @@ h3 {
 	margin-bottom: 16px;
 	float: left;
 	width: 696px;
+	position: absolute;
 }
 
 #legend * {
@@ -257,4 +259,73 @@ h3 {
 /*panels*/
 .segment p+p {
 	margin-top: 1.3rem;
+}
+
+.properties-panel li {
+	display: block;
+	float: left;
+}
+
+.property-photo {
+	float: left;
+	width: 105px;
+	border: 1px solid black;
+	height: 77px;
+}
+
+.properties-panel li + li {
+	margin-left: 2px;
+}
+
+span.desc {
+	display: none;
+}
+
+.prop-title {
+	font-weight: bold;
+}
+
+#dialog .segment {
+	margin-bottom: 21px;
+}
+
+/*streetviews*/
+#streetview-gallery {
+	overflow: hidden;
+	margin-top: 4px;
+}
+
+#streetview-gallery img {
+	float: left;
+	border: 1px solid black;
+	width: 105px;
+}
+
+#streetview-gallery img + img {
+	margin-left: 2px;
+}
+
+.amenities-panel dt, .amenities-panel dd {
+	width: 70px;
+	vertical-align: top;
+	font-weight: normal;
+}
+
+.author {
+	font-style: italic;
+}
+
+.amenities-panel dd {
+	font-weight: bold;
+}
+
+.properties-panel {
+	overflow: hidden;
+	margin-top: 4px;
+}
+
+.outcode-description {	
+	max-height: 58px;
+	overflow: hidden;
+	display: block;	
 }
