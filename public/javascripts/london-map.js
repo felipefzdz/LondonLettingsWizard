@@ -138,6 +138,7 @@ MAP = (function(){
 		raphaelShapeObject.attr({fill : fill, "stroke-width" : strokeWidth});
 	}
 	
+	
 	function makeHoverStateForPath(object, pathname) {
 		var target = document.getElementById('postcode-identifier');
 		
@@ -148,8 +149,35 @@ MAP = (function(){
 		
 		object.hover(function(){
 			target.innerHTML = "Postcode area: " + pathname.toUpperCase();
+			this.toFront();
+			this.animate({transform: "s1.6 1.6 "}, 800, "elastic");
+			this.attr({"stroke-width" : "3", stroke : "404040"});	
+			
+			
 		});
+		
+		object.mouseout(function () {
+			console.log("out");
+                object.stop().animate({transform: ""}, 800, "elastic");
+                this.attr({"stroke-width" : 0});
+            });
+            
+        
+        object.click(function(){
+        	showPanel();
+        });
+		
 	}
+	
+	showPanel = function () {
+		var dialog = $('#dialog');
+		var initsToHide = $('.init');
+		
+		initsToHide.hide();
+		dialog.show();
+		
+	};
+	
 	
 	
 	function PUBLIC_drawMap(canvas) {

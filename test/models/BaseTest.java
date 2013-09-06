@@ -25,7 +25,7 @@ public class BaseTest extends WithApplication {
 
     public static FakeApplication app;
 
-    public static Rate rateIslington = new Rate(1L, 6, 7, 2, 3);
+    public static Rate rateIslington = new Rate(1L, 6, 7, 2);
 
     public static Area islington = new Area(1L,"Islington","Desc", rateIslington, "outcode" );
 
