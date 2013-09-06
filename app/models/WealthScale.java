@@ -17,7 +17,7 @@ public enum WealthScale {
     private WealthScale(double coefficient){
         this.coefficient = coefficient;
     }
-    public static WealthScale calculateWealthScale(int providedPrice, Price price){
+    public static WealthScale getWealthScale(int providedPrice, Price price){
         if (providedPrice >= price.maxPrice){
             return VERYHIGH;
         }
@@ -41,17 +41,17 @@ public enum WealthScale {
     }
 
 
-    public static double getCalculatedWealthScale(WealthScale wealthScale, int moneyValue){
+    public static Double adjustWealthScale(WealthScale wealthScale, int moneyValue){
         switch(wealthScale)  {
-            case OUTOFRANGE: return OUTOFRANGE.getCoefficient();   // -1000 ~ -1000
-            case VERYLOW: return moneyValue * VERYLOW.getCoefficient() * 5;  // 0 ~ 50
-            case LOW: return moneyValue * LOW.getCoefficient() * 5; // 0 ~  40
-            case AVERAGE: return moneyValue * AVERAGE.getCoefficient() * 5; // 0 ~ 30
-            case HIGH: return moneyValue * HIGH.getCoefficient() * 5; // 0 ~ 20
-            case VERYHIGH: return moneyValue * VERYHIGH.getCoefficient() * 5; // 0 ~ 10
+            case OUTOFRANGE: return OUTOFRANGE.getCoefficient();
+            case VERYLOW: return moneyValue * VERYLOW.getCoefficient() * 5;
+            case LOW: return moneyValue * LOW.getCoefficient() * 5;
+            case AVERAGE: return moneyValue * AVERAGE.getCoefficient() * 5;
+            case HIGH: return moneyValue * HIGH.getCoefficient() * 5;
+            case VERYHIGH: return moneyValue * VERYHIGH.getCoefficient() * 5;
 
         }
-        return -1000;
+        return new Double(-1000);
     }
 
 
