@@ -161,8 +161,22 @@ MAP = (function(){
                 object.stop().animate({transform: ""}, 800, "elastic");
                 this.attr({"stroke-width" : 0});
             });
+            
+        
+        object.click(function(){
+        	showPanel();
+        });
 		
 	}
+	
+	showPanel = function () {
+		var dialog = $('#dialog');
+		var initsToHide = $('.init');
+		
+		initsToHide.hide();
+		dialog.show();
+		
+	};
 	
 	
 	
