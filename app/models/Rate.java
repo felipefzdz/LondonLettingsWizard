@@ -35,8 +35,8 @@ public class Rate {
 
     public static Double calculateEndRate(Area area, AreaFilter areaFilter) {
         int composeEndRate = area.rate.getSumEndRateWithoutWealthScaleFactor(areaFilter);
-        WealthScale wealthScale = WealthScale.calculateWealthScale(areaFilter.price, Price.findByAreaIdAndBedrooms(area.id, areaFilter.bedrooms));
-        return composeEndRate + WealthScale.getCalculatedWealthScale(wealthScale, areaFilter.moneyValue);
+        WealthScale wealthScale = WealthScale.getWealthScale(areaFilter.price, Price.findByAreaIdAndBedrooms(area.id, areaFilter.bedrooms));
+        return composeEndRate + WealthScale.adjustWealthScale(wealthScale, areaFilter.moneyValue);
     }
 
 

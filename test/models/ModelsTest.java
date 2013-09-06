@@ -19,9 +19,9 @@ public class ModelsTest extends BaseTest {
     public void testCountInserts() {
         insertInitialData();
 
-        assertEquals(111, Area.find.findRowCount());
-        assertEquals(111, Price.find.findRowCount());
-        assertEquals(111, Rate.find.findRowCount());
+        assertEquals("Should be 111 areas in DB", 111, Area.find.findRowCount());
+        assertEquals("Should be 111 prices in DB", 111, Price.find.findRowCount());
+        assertEquals("Should be 111 rates in DB", 111, Rate.find.findRowCount());
     }
 
 //    @Test
