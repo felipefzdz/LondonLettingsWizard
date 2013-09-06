@@ -16,3 +16,6 @@ for (var i = 0; i < results.length; i++) {
 }
 
 MAP.applyScores(scores);
+
+// Dialog
+
