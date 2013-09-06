@@ -16,3 +16,8 @@ for (var i = 0; i < results.length; i++) {
 }
 
 MAP.applyScores(scores);
+
+//setup property hovers
+var propPanel = $('.properties-panel')[0];
+var properties = propPanel.find('li');
+console.log(properties);
