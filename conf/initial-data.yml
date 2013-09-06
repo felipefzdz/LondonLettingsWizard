@@ -668,54 +668,6 @@ rates:
          greenSpaces:     6
          nightLife:       4
 
-     - !!models.Rate
-         id:              112
-         rateTransport:   7
-         greenSpaces:     4
-         nightLife:       2
-
-     - !!models.Rate
-         id:              113
-         rateTransport:   8
-         greenSpaces:     10
-         nightLife:       4
-
-     - !!models.Rate
-         id:              114
-         rateTransport:   8
-         greenSpaces:     1
-         nightLife:       3
-
-     - !!models.Rate
-         id:              115
-         rateTransport:   8
-         greenSpaces:     4
-         nightLife:       3
-
-     - !!models.Rate
-         id:              116
-         rateTransport:   8
-         greenSpaces:     6
-         nightLife:       3
-
-     - !!models.Rate
-         id:              117
-         rateTransport:   8
-         greenSpaces:     9
-         nightLife:       1
-
-     - !!models.Rate
-         id:              118
-         rateTransport:   9
-         greenSpaces:     3
-         nightLife:       7
-
-     - !!models.Rate
-         id:              119
-         rateTransport:   10
-         greenSpaces:     8
-         nightLife:       3
-
 # Areas
 
 areas:
