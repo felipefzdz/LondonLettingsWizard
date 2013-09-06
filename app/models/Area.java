@@ -29,7 +29,7 @@ public class Area extends Model{
 
     public String outcode;
 
-    public static final int TOP_AREAS = 6;
+    public static final int TOP_AREAS = 3;
 
     public static Model.Finder<Long,Area> find = new Model.Finder<Long, Area>(
             Long.class, Area.class
