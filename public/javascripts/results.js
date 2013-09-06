@@ -14,3 +14,5 @@ for (var i = 0; i < results.length; i++) {
 	
 	scores[outcode] = score;
 }
+
+MAP.applyScores(scores);

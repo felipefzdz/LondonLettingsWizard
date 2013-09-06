@@ -126,18 +126,29 @@ MAP = (function(){
 		};
 		
 	function shapeApplyStyle(raphaelShapeObject, customFill) {
-		//Apply style to a shape path. Apply default style if none specified.
-		
+		//Apply style to a shape path. Apply default style if none specified.		
 		var strokeWidth = 0;		
 		var fill = "#004889";
 		
 		if (customFill) {
 			fill = customFill;
 		}
-		
-		console.log(fill);
+
 		
 		raphaelShapeObject.attr({fill : fill, "stroke-width" : strokeWidth});
+	}
+	
+	function makeHoverStateForPath(object, pathname) {
+		var target = document.getElementById('postcode-identifier');
+		
+		if (target == undefined) {
+			return;
+		}
+
+		
+		object.hover(function(){
+			target.innerHTML = "Postcode area: " + pathname.toUpperCase();
+		});
 	}
 	
 	
@@ -151,33 +162,41 @@ MAP = (function(){
 			
 			outcodes[path] = new Object;			
 			outcodes[path].representation = mapCanvas.path(londonMapPaths[path]);
-			shapeApplyStyle(outcodes[path].representation); 
+			shapeApplyStyle(outcodes[path].representation);
+			
+			makeHoverStateForPath(outcodes[path].representation, path);		
+			
 		}		
 	}
 	
 	function mapScoreToColor(score) {
 		var color;
 		
-		if (score == 0) {
+		if (score < 0) {
 			color = '#cccccc';
 		}
-		else if (score < 10) {
+		else if (score <= 8) {
+			color = '#666666';
+		}
+		else if (score <= 12) {
 			color = '#00478e';
 		}
-		else if (score < 20) {
+		else if (score <= 17) {
+			color = '#156d8a';
+		}
+		else if (score <= 22) {
 			color = '#0e836a';
-		}
-		else if (score < 30) {
-			color = '#47ba78';
-		}
-		else if (score < 40) {
-			color = '#7cc242';
 		}		
 		else {
-			color = '#d7a300';
+			color = '#7cc242';
 		}
 
 		return color;
+	}
+	
+	function makeNumberIntoScoreBlock(spanToTransform) {
+		var number = spanToTransform.text();
+		window.alert(number);
 	}
 	
 	
@@ -185,9 +204,9 @@ MAP = (function(){
 		//Take JSON of outcode and scores to apply
 				
 		for (postcode in postcodeScoreJSON) {
-			postcode = postcode.toLowerCase();
+			postcodeLC = postcode.toLowerCase();
 			
-			var shapeToManipulate = outcodes[postcode].representation;
+			var shapeToManipulate = outcodes[postcodeLC].representation;
 			var thisFill = mapScoreToColor(postcodeScoreJSON[postcode]);
 			
 			styleToApply = thisFill;

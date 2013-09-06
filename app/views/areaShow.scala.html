@@ -4,11 +4,26 @@
 @main("London Lettings Wizard") {
 
 <div class="wrapper wrapper-large">
-
-	<h1>@areas.size() area(s)</h1>
+	
+	<h2>Where should I live in London? <span class="title-specific">Your results</span></h2>
+	@*<h2>@areas.size() area(s)</h2>*@
 	</br>
 	
-	<div id="paper"> </div>
+	
+	
+	<div id="legend">
+		<div class="box g6"></div><p>Great!</p>
+		<div class="box g5"></div><p>Decent</p>	
+		<div class="box g4"></div><p>So-so</p>	
+		<div class="box g3"></div><p>Meh</p>	
+		<div class="box g2"></div><p>Rubbish!</p>
+		<div class="box g1"></div><p>Too expensive</p>	
+		
+	</div>
+	
+	
+	
+	
 	
 	<ul id="outcode-results">
 	    @for(area <- areas) {
@@ -17,36 +32,47 @@
 	        <span class="score">@area._1</span>
 	    </li>
 	    }
-	
-	    Based on these requirements:
-	
-	    <li>
-	        rateTransport:  @filterData.get("rateTransport")
-	    </li>
-	
-	    <li>
-	        greenSpaces:  @filterData.get("greenSpaces")
-	    </li>
-	
-	    <li>
-	        nightLife:  @filterData.get("nightLife")
-	    </li>
-	
-	    <li>
-	        moneyValue:  @filterData.get("moneyValue")
-	    </li>
 	</ul>
 	
-	    We recommend these areas to you
-	<ul id="recommendation">
-	    @for(topArea <- topAreas) {
-	    <li class="outcode-result">
-	       <span class="outcode-name">@topArea.name</span>
-	       <span class="outcode-description">@topArea.description</span>
-	    </li>
-	    </br>
-	    }
-	</ul>
+	<div class="segment">
+		<h3>Based on these requirements:</h3>	
+		<ul>
+		    <li>
+		        <span class="val-label">Transport:</span> <span class="value-transform">@filterData.get("rateTransport")</span>
+		    </li>
+		
+		    <li>
+		        <span class="val-label">Green spaces:</span> <span class="value-transform">@filterData.get("greenSpaces")</span>
+		    </li>
+		
+		    <li>
+		        <span class="val-label">Nightlife:</span> <span class="value-transform">@filterData.get("nightLife")</span>
+		    </li>
+		
+		    <li>
+		        <span class="val-label">Value for money:</span> <span class="value-transform">@filterData.get("moneyValue")</span>
+		    </li>
+		</ul>
+	</div>
+	
+	<div id="paper"><p id="postcode-identifier">Hover over an area to see its postcode</p></div>
+	
+
+	<div class="segment">
+		<h3>We recommend these areas to you:</h3>
+		<ul id="recommendation">
+		@for(topArea <- topAreas) {
+			<li class="outcode-result">
+			   <span class="outcode-name">@topArea.name</span>
+			   <span class="outcode-description">@topArea.description</span>
+			</li>
+		}
+		</ul>
+	</div>
+	
+	<p class="clear"><a class="btn right">Find properties</a></p> 
+	
+
 
 </div>
 

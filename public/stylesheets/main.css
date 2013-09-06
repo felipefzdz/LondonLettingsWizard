@@ -3,6 +3,43 @@
 	float: right;
 }
 
+.left {
+	float: left;
+}
+
+.clear {
+	clear: both;
+}
+
+.g1 {
+	background-color: #cccccc;
+}
+
+.g2 {
+	background-color: #666666;
+}
+
+.g3 {
+	background-color: #00478e;
+}
+
+.g4{
+	background-color: #156d8a;
+}
+
+.g5 {
+	background-color: #0e836a;
+}
+
+.g6 {
+	background-color: #7cc242;
+}
+
+.separate {
+	margin-top: 16px;
+}
+
+
 
 html {
 	font-size: 10px;
@@ -26,6 +63,7 @@ div.wrapper {
 	width: 768px;
 	margin: 200px auto auto auto;
 	padding-bottom: 32px;
+	overflow: hidden;
 }
 
 div.wrapper-large {
@@ -63,7 +101,7 @@ dt, dd {
 }
 
 dd {
-	width: 128px;
+	width: 207px;
 }
 
 dl.largeform dd {
@@ -88,12 +126,19 @@ dt {
 }
 
 dl.largeform dt {
-	width: 240px;
+	width: 248px;
 }
 
 .di {
 	display: inline-block;
-	margin-right: 41px /*add 9px for padding/box stuff on input to left*/
+}
+
+.di + .di, .di + .di + .di + .di {
+	margin-left: 41px;/*add 9px for padding/box stuff on input to left*/
+}
+
+dl.largeform .di + .di {
+	margin-left: 0;
 }
 
 dl.largeform .di {
@@ -103,6 +148,10 @@ dl.largeform .di {
 
 .di + .di {
 	margin-top: 16px;
+}
+
+.di + .di + .di {
+	margin-left: 0;
 }
 
 .btn, input[type="submit"] {
@@ -129,14 +178,77 @@ dl.largeform .di {
 	vertical-align: middle;
 }
 
+.btn-grey {
+	background-position: 0 -900px;
+	border-color: #cccccc;
+	color: #555555;
+	text-shadow: 0 0px 0px #202020;
+}
+
 
 /*svg canvas*/
 #paper {
 	width: 696px;
 	height: 596px;
+	float: left;
+}
+
+#postcode-identifier {
+	font-weight: bold;
 }
 
 /*result mgmt*/
 #outcode-results {
 	display: none;
+}
+
+
+h3 {
+	margin-bottom: 6px;
+}
+
+.segment .val-label {
+	width: 128px;
+	display: inline-block;
+}
+
+.segment {
+	margin-bottom: 48px;
+	width: 327px;
+	float: right;
+}
+
+#legend {
+	margin-bottom: 16px;
+	float: left;
+	width: 696px;
+}
+
+#legend * {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#legend p {
+	margin-left: 8px;
+}
+
+.box {
+	display: block;
+	width: 24px;
+	height: 24px;
+}
+
+#legend p + .box {
+	margin-left: 16px;
+}
+
+.outcode-result {
+	margin-bottom: 8px;
+}
+
+.outcode-name {
+	display: block;
+	font-weight: bold;
+	margin-bottom: 2px;
 }
